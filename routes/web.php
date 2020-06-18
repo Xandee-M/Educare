@@ -20,3 +20,8 @@ Route::get('/', function () { /* define url */
 Route::get('/home', function () {
     return view('home');
 });
+
+Route::get('/joao', function()
+{
+    return view('joao');
+});
