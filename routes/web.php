@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function () { /* define url */
+    return view('welcome'); /* define qual arquivo vai vir com a url */
+});
+
+Route::get('/home', function () {
+    return view('home');
 });
