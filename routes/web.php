@@ -13,15 +13,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () { /* define url */
-    return view('welcome'); /* define qual arquivo vai vir com a url */
+
+Route::get('/', function () {
+    return view('welcome');
 });
 
-Route::get('/home', function () {
-    return view('home');
+Route::get('/thiago', function () { /* define url */
+    return view('thiago'); /* define qual arquivo vai vir com a url */
+});
+
+Route::get('/xande', function () {
+    return view('xande');
 });
 
 Route::get('/joao', function()
 {
     return view('joao');
+});
+
+Route::get('/kenny', function()
+{
+    return view('kenny');
+});
+
+Route::get('/marcos', function()
+{
+    return view('marcos');
 });
