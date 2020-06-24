@@ -5,7 +5,7 @@
     <meta name="Author" content="Equipe Educare++" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @yield('header')
-    <link rel="icon" href="midia/favicon-educare.png" type="image"/>
+    <link rel="icon" href="images/favicon-educare.png" type="image"/>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800">
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
