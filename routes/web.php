@@ -14,29 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/thiago', function () { /* define url */
-    return view('thiago'); /* define qual arquivo vai vir com a url */
-});
-
-Route::get('/xande', function () {
-    return view('xande');
-});
-
-Route::get('/joao', function()
-{
-    return view('joao');
-});
-
-Route::get('/kenny', function()
-{
-    return view('kenny');
-});
-
-Route::get('/marcos', function()
-{
-    return view('marcos');
-});
+Route::get('/login', 'PrimarioController@login');
+Route::get('/home', 'PrimarioController@home');
+Route::get('/perfil', 'PrimarioController@perfil');

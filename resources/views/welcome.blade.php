@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Educare Desenvolvimento</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -65,31 +65,17 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
+     
             <div class="content">
                 <div class="title m-b-md">
-                    Educare
+                    Educare++
                 </div>
 
                 <div class="links">
-                    <a href="/xande">Alexandre</a>
-                    <a href="/joão">João</a>
-                    <a href="/kenny">Kenny</a>
-                    <a href="/marcos">Marcos</a>
-                    <a href="/thiago">Thiago</a>
+                    <a href="/login">Login e Cadastro</a>
+                    <a href="/home">Home</a>
+                    <a href="/perfil">Perfil</a>
+         
                    
                 </div>
             </div>
