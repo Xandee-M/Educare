@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 class PrimarioController extends Controller
 {
-    public function desenv(){
+    public function home(){
 
-        return view('welcome');
+        return view('home');
     }
 
     public function login(){
@@ -14,9 +14,9 @@ class PrimarioController extends Controller
         return view('login');
     }
 
-    public function home(){
+    public function forum(){
 
-        return view('home');
+        return view('forum');
     }
 
     public function perfil(){

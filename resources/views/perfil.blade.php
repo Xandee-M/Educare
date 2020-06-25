@@ -5,6 +5,7 @@
     <meta name="description" content="" />
     <meta property="og:title" content="">
     <meta property="og:description" content="">
+    <link rel="stylesheet" href="/css/perfil.css">
 @endsection
 @section('content')
 
