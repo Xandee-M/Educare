@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+            <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
         <title>Educare Desenvolvimento</title>
 
@@ -12,8 +14,8 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-color: #292929;
+                color: white;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
@@ -61,24 +63,84 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+
+
+            #containerPrincipal{
+                width: 100%;
+                height: 700px;
+                background-image: url("../images/bg.jpg");
+                overflow: hidden;
+            }
+
+            #itensmenu li a{
+                color: white;
+                font-size: 25px;
+            }
+
+            .buttonLogin{
+            margin-right: 50px; 
+            }
+
+            .search{
+                margin-right:140px; 
+                margin-left:75px;
+            }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-     
-            <div class="content">
-                <div class="title m-b-md">
-                    Educare++
+
+    <header>
+        <div id="containerPrincipal" class="container-fluid">
+            <nav class="navbar navbar-expand-lg">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <a class="navbar-brand" href="#">
+                    <img src="../images/logo-educare.png" alt="logo-educare">
+                </a>
+                <div class="search">
+                    <form class="form-inline my-2 my-lg-0 ">
+                      <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                    </form>
                 </div>
 
-                <div class="links">
-                    <a href="/login">Login e Cadastro</a>
-                    <a href="/home">Home</a>
-                    <a href="/perfil">Perfil</a>
-         
-                   
+              <div class="collapse navbar-collapse" >
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="itensmenu">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Cursos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Forum</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/quemsomos/" class="nav-link text-light">Quem Somos</a>
+                  </li>
+                </ul>
+
+                <div class="buttonLogin">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="itensmenu">
+                  <li class="nav-item">
+                    <a href="/login" class="nav-link text-light">Entrar | </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/login" class="btn btn-outline-primary ml-1">Cadastre-se</a>
+                  </li>
+                </ul>
+                    
                 </div>
-            </div>
+
+              </div>
+            </nav>
+
         </div>
+    </header>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 </html>
