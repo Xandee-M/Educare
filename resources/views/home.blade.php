@@ -12,6 +12,7 @@
 
         <div id="containerPrincipal" class="container-fluid">
         </div>
+
         <div id="containerCard" class="container">
 	        <h1>Sobre a Plataforma:</h1>
 	        <div class="card-deck">
@@ -26,7 +27,7 @@
 	            </div>
 	            <div class="card shadow mb-5">
 	                <div class="img-card">
-	                <img src="../images/curso.png" href="/cursos" class="rounded-circle center" alt="Cursos-Online">
+	                    <img src="../images/curso.png" href="/cursos" class="rounded-circle center" alt="Cursos-Online">
 	                </div>
 	                <div class="card-body">
 	                    <h5 class="card-title">Cursos Online</h5>
