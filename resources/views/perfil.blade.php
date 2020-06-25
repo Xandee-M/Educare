@@ -9,6 +9,9 @@
 @endsection
 @section('content')
 
-   <!-- Escreva seu código -->
+        <div>
+          <h2 class="texto-branco">TITULO BEM GRANDE</h2>
+          <h2>TEXTO QUE NÃO QUERO MUDAR</h2>
+        </div>
 
 @endsection

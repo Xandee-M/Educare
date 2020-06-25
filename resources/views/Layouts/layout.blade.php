@@ -11,53 +11,65 @@
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/layout.css">
 </head>
 <body>
-<header class="transparente">
-    <nav class="navbar navbar-expand-lg">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="#">
-                <img src="../images/logo-educare.png" alt="logo-educare">
-            </a>
-            <div class="search">
-                <form class="form-inline my-2 my-lg-0 ">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                </form>
-            </div>
-        <div class="collapse navbar-collapse" >
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="itensmenu">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Cursos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Forum</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/quemsomos/" class="nav-link text-light">Quem Somos</a>
-                </li>
-            </ul>
-            <div class="buttonLogin">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="itensmenu">
-                  <li class="nav-item">
-                    <a href="/login" class="nav-link text-light">Entrar | </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="/login" class="btn btn-outline-primary ml-1">Cadastre-se</a>
-                  </li>
-                </ul>    
-            </div>
+
+<div class="container-fluid">
+
+    <nav class="">
+            <div class="row">
+                <div class="col-lg-2">
+                    <a class="navbar-brand" href="#">
+                        <img class="img-fluid" src="../images/logo-educare.png" alt="logo-educare">
+                    </a>
+                </div>
+                <div class="col-lg-8">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <div class="input-group mb-2">
+                            
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button">Pesquisar</button>
+                            </div>
+                        </div>  
+                    </div>              
+                </div>
+                <div class="col-lg-2">
+                    <div class="box-perfil">
+                        <a href="#menu-toggle" id="menu-toggle" class="navbar-brand"><img class="perfil" src="../images/perfil.jpg" alt="logo-educare"></a>         
+                                <div id="wrapper" class="toggled">
+                                    <div id="sidebar-wrapper">
+                                        <ul class="sidebar-nav">
+                                            <li class="sidebar-brand"> <a href="#"> Start Bootstrap </a> </li>
+                                            <li> <a href="#">Dashboard</a> </li>
+                                            <li> <a href="#">Shortcuts</a> </li>
+                                            <li> <a href="#">Overview</a> </li>
+                                            <li> <a href="#">Events</a> </li>
+                                            <li> <a href="#">About</a> </li>
+                                            <li> <a href="#">Services</a> </li>
+                                            <li> <a href="#">Contact</a> </li>
+                                        </ul>
+                                    </div> <!-- /#sidebar-wrapper -->
+                                </div> <!-- /#wrapper -->
+                                
+                              
+  
+                    </div>
+                </div>
+            </div> 
+            </nav>
+
         </div>
-    </nav>
-</header>
+
     @yield('content')
     
-    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="/js/bootstrap/bootstrap.min.js"></script>
+
     <script src="/js/custom.js"></script>
 </body>
 </html>
+

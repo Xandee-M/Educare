@@ -7,12 +7,11 @@
     <meta property="og:description" content="">
     <link rel="stylesheet" href="/css/home.css">
 @endsection
-@section('content')
-
-
+@section('content')                                                                               
+    
+    <div id="page-content-wrapper">
         <div id="containerPrincipal" class="container-fluid">
         </div>
-
         <div id="containerCard" class="container">
 	        <h1>Sobre a Plataforma:</h1>
 	        <div class="card-deck">
@@ -45,6 +44,6 @@
 	            </div>
 	        </div>
         </div>
-
+    </div>
  
 @endsection

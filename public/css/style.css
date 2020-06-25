@@ -7,9 +7,16 @@
 /* Cor Principal #292929 */
 /* Cor Secundaria #2995CF */
 
-html,body{width: 100%;height:100%;background-color: #292929;}
+body {
+    overflow-x: hidden;
+  }
 
-.transparente{position: absolute;}
+html,body{width: 100%;height:100%;background-color: #292929;}
 
 .text-white{color: #fff;}
 .theme-color{color: #2995CF;}
+
+
+
+
+
