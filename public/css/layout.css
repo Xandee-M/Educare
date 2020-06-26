@@ -1,4 +1,4 @@
-.perfil {border-radius: 50%;border: solid 5px #fff;}
+.perfil {border-radius: 50%;border: solid 5px #fff; position: fixed; right: 35px; top: 5px;}
 .transparente{position: absolute;}
 .box-perfil{position: absolute;right: 20px;}
 .btn-secondary{border-radius: 50%;background-color: #2995CF;}
@@ -20,6 +20,7 @@
     width: 0;
     height: 100%;
     margin-right: -250px;
+    margin-top: 140px;
     overflow-y: auto;
     background: #000;
     -webkit-transition: all 0.5s ease;
@@ -30,6 +31,19 @@
   
   #wrapper.toggled #sidebar-wrapper {
     width: 250px;
+  }
+
+  #homeMenu li:hover{
+    background-color: #2995CF;
+  }
+
+  #homeMenu li a:hover{
+    color: black;
+  }
+
+  span.barraVertical{
+    color: white;
+    font-size: 30px;
   }
   
   .sidebar-nav {
@@ -50,5 +64,17 @@
     display: block;
     text-decoration: none;
     color: #999999;
+  }
+
+  .sidebar-nav li:hover{
+    color: #2995CF;
+  }
+
+  .buttonEntrar{
+    float: center;
+    bottom: 5px;
+    margin: 500px auto 0 auto;
+    padding: 25px;
+
   }
   

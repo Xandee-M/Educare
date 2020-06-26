@@ -31,7 +31,7 @@
                             
                             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                             <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button">Pesquisar</button>
+                                <button class="btn btn-outline-info" type="button">Pesquisar</button>
                             </div>
                         </div>  
                     </div>              
@@ -41,16 +41,17 @@
                         <a href="#menu-toggle" id="menu-toggle" class="navbar-brand"><img class="perfil" src="../images/perfil.jpg" alt="logo-educare"></a>         
                                 <div id="wrapper" class="toggled">
                                     <div id="sidebar-wrapper">
-                                        <ul class="sidebar-nav">
-                                            <li class="sidebar-brand"> <a href="#"> Start Bootstrap </a> </li>
-                                            <li> <a href="#">Dashboard</a> </li>
-                                            <li> <a href="#">Shortcuts</a> </li>
-                                            <li> <a href="#">Overview</a> </li>
-                                            <li> <a href="#">Events</a> </li>
-                                            <li> <a href="#">About</a> </li>
-                                            <li> <a href="#">Services</a> </li>
-                                            <li> <a href="#">Contact</a> </li>
+                                        <ul class="sidebar-nav" id="homeMenu">
+                                            <li class="sidebar-brand"> <a href="#"> Home</a> </li>
+                                            <li> <a href="#">Cursos</a> </li>
+                                            <li> <a href="#">Forum</a> </li>
+                                            <li> <a href="#">Quem Somos</a> </li>
                                         </ul>
+                                        <div class="buttonEntrar">
+                                            <button type="button" class="btn btn-outline-info">Entrar</button>
+                                            <span class="barraVertical">|</span>
+                                            <button type="button" class="btn btn-outline-success">Cadastre-se</button>
+                                        </div>
                                     </div> <!-- /#sidebar-wrapper -->
                                 </div> <!-- /#wrapper -->
                                 
