@@ -46,6 +46,7 @@
     width: 100%;
     height: 700px;
     background-image: url("../images/bg.jpg");
+    color:white;
    
 }
 
@@ -62,13 +63,40 @@
     text-align: center;
 }
 
+#containerForum {
+    position: relative;
+
+}
 
 #itensmenu li a{
     color: white;
     font-size: 25px;
 }
 
+#divContainerPrincipal{
+    position: relative;
+    top: 115px;
+    left: 75px;
+    height: 500px;
+    width: 1000px;
+}
 
+#divContainerPrincipal h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+#divContainerPrincipal p{
+    font-size: 20px;
+    text-align: center;
+}
+
+#divContainerPrincipal input{
+    width: 750px;
+    height: 35px;
+    border:1px solid green;
+    border-radius: 20px;
+}
 
 .search{
     margin-right:140px; 

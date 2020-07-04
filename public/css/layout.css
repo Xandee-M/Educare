@@ -35,6 +35,7 @@
 
   #homeMenu li:hover{
     background-color: #2995CF;
+    text-align: center;
   }
 
   #homeMenu li a:hover{

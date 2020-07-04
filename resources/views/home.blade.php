@@ -11,6 +11,16 @@
     
     <div id="page-content-wrapper">
         <div id="containerPrincipal" class="container-fluid">
+        	<div id="divContainerPrincipal">
+        		<h1>Entre já para a Educare++</h1>
+        		<p>Uma comunidade para pessoas que se interessam por Tecnologia. 
+        		Que tal aprender uma nova linguaguem de programação?<br>
+        		Ou quem sabe ensinar alguém a programar?
+        		Você também pode usar nosso forum para fazer uma perguntar aos usuarios da comunidade.</p><br>
+        		<input type="email" placeholder="Digite seu Email" id="emailCadastro">
+				<button class="btn btn-success" type="button" >Cadastre-se</button>
+        	</div>
+
         </div>
         <div id="containerCard" class="container">
 	        <h1>Sobre a Plataforma:</h1>
@@ -44,6 +54,9 @@
 	            </div>
 	        </div>
         </div>
+        <div class="container" id="containerForum">
+        	
+        </div>	
     </div>
  
 @endsection
