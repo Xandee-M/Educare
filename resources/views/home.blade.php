@@ -54,6 +54,60 @@
 	            </div>
 	        </div>
         </div>
+        <div class="container-fluid" id="containerCursos">
+	        <div class="container" >
+	        	<br><br><h1>Cursos em Destaque:</h1><br>
+		      <div class="card-deck">
+		        <div class="card">
+		          <div class="item">
+		            <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" alt="Curso HTML5">
+		          </div>
+		          <div class="border-effect bg-warning"></div>
+		          <div class="card-body">
+		            <h4 class="card-title">HTML5</h4>
+		            <p class="card-text"><span class="green">Gratuito</span></p>
+		            <button class="btn btn-outline-info" type="button" >Acessar Curso</button>
+		          </div>
+		        </div>
+		        <div class="card">
+		          <div class="item">
+		            <img class="card-img-top" src="https://i0.wp.com/www.tutorialwebdesign.com.br/wp-content/uploads/2015/07/css3.jpg?fit=250%2C237&ssl=1" alt="Curso HTML5">
+		          </div>
+		          <div class="border-effect bg-warning"></div>
+		          <div class="card-body">
+		            <h4 class="card-title">CSS3</h4>
+		            <p class="card-text"><span class="green">Gratuito</span></p>
+		            <button class="btn btn-outline-info" type="button" >Acessar Curso</button>
+		          </div>
+		        </div>
+		        <div class="card">
+		          <div class="item">
+		            <img class="card-img-top" src="https://sujeitoprogramador.com/wp-content/uploads/2019/08/jsjsjs.png" alt="Curso HTML5">
+		          </div>
+		          <div class="border-effect bg-warning"></div>
+		          <div class="card-body">
+		            <h4 class="card-title">JAVASCRIPT</h4>
+		            <p class="card-text"><span class="green">Gratuito</span></p>
+		            <button class="btn btn-outline-info" type="button" >Acessar Curso</button>
+		          </div>
+		        </div>
+		        <div class="card">
+		          <div class="item">
+		            <img class="card-img-top" src="https://jonathasguerra.com.br/blog/wp-content/uploads/2015/06/php7.jpeg" alt="Curso HTML5">
+		          </div>
+		          <div class="border-effect bg-warning"></div>
+		          <div class="card-body">
+		            <h4 class="card-title">PHP7</h4>
+		            <p class="card-text"><span class="green">Gratuito</span></p>
+		            <button class="btn btn-outline-info" type="button" >Acessar Curso</button>
+		          </div>
+		        </div><br>
+		      </div>
+		    <div id="buttonCursos">
+		       	<button class="btn btn-success" type="button" >Ver todos os Cursos</button>
+		    </div>
+		</div>
+    </div>  
         <div class="container" id="containerForum">
         	
         </div>	
