@@ -5,11 +5,45 @@
 /* CLASSES QUE SE APLICAM APENAS ONDE O ARQUIVO FOR CHAMADO!!!*/
 
 
-.fundo-login{background-image: url(/images/login/fundo-login.jpg);background-size: cover;height: 100%;}
 
 .nav-login img{width: 60%;}
 
-.margin-login {margin: 50px 0px 50px 0px;}
+.margin-login {margin: 10px 0px 10px 0px;}
 
-.visual-padding{padding: 40px;}
+.visual-padding{padding: 10px;}
 
+
+.fundo-login{
+    background: url(/images/login/fundo-login.jpg);
+    
+}
+.tab-area{
+    display: flex;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, .6);
+    color: orangered;
+    padding: 10px;
+    height: auto;
+}
+.login-area form{
+    background: rgba(0, 0, 0, .6);
+    padding: 40px;
+    height: 50vh;
+    border-radius: 0 0 5px 5px;
+}
+.login-area form h1{
+    color: #ffff;
+}
+.activate{
+    background-color: orangered;
+    color:#FFF;
+    font-weight: bold;
+}
+.tab-item{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    color:#FFF;
+}
