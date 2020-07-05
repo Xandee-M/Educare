@@ -1,6 +1,7 @@
-@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
-.perfil {border-radius: 50%;border: solid 5px #fff; position: ; right: 35px; top: 5px;}
+
+.borda{border-bottom: 3px solid #fff;}
+.perfil {border-radius: 50%;border: solid 5px #292929; position: ; right: 35px; top: 5px;}
 .transparente{position: absolute;}
 .box-perfil{position: absolute;right: 20px;z-index: 999999;}
 
@@ -55,7 +56,7 @@ body {
 
 .sidebar-nav {
   position: absolute;
-  top: 0;
+  top: 50px;
   width: 250px;
   margin: 0;
   padding: 0;

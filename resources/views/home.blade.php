@@ -22,7 +22,7 @@
             <p>Uma comunidade para pessoas que se interessam por Tecnologia.</p>
 			<p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
 			</div>
-			          </div>
+		</div>
         </div>
       </div>
     </div>

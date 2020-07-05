@@ -16,8 +16,7 @@
 <body>
 
 
-
-        <nav class="container-fluid">
+        <nav class="container-fluid borda">
             <div class="row">
                 <div class="col-lg-2">
                     <a class="navbar-brand" href="#">
@@ -47,7 +46,7 @@
         <div id="wrapper" class="">
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav" id="homeMenu">
-                    <li class="sidebar-brand"> <a href="#"> Home</a> </li>
+                    <li> <a href="#"> Home</a> </li>
                     <li> <a href="#">Cursos</a> </li>
                     <li> <a href="#">Forum</a> </li>
                     <li> <a href="#">Quem Somos</a> </li>
