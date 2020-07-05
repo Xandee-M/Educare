@@ -23,7 +23,7 @@
 
 }
 .profile-info{
-    display: flex;
+    display: inline-block;
     flex-direction: column;
 }
 .profile-description{
@@ -32,6 +32,18 @@
     margin-top: -10px;
     padding-left: 100px;
     max-width: 800px;
+    
     color: #FFF;
 
 }
+
+.full-banner{padding-left: 0px !important; padding-right: 0px !important;}
+.banner{height: 200px;}
+.box-perfil-p{position: absolute;top: -10vh; left: 30px;z-index: 999999;}
+.perfil-p {border-radius: 50%;border: solid 5px #292929;  }
+
+.box-medalha{position: absolute;top: -5vh; left: 30px;}
+.medalha{border-radius: 50%;border: solid 5px #292929;  }
+
+.box-card{border: 1px solid rgb(0, 123, 255) !important;background-color: #ffffff00 !important; }
+.card{margin-bottom: 20px;}
