@@ -8,20 +8,26 @@
     <link rel="stylesheet" href="/css/home.css">
 @endsection
 @section('content')                                                                               
-    
-    <div id="page-content-wrapper">
-        <div id="containerPrincipal" class="container-fluid">
-        	<div id="divContainerPrincipal">
-        		<h1>Entre já para a Educare++</h1>
-        		<p>Uma comunidade para pessoas que se interessam por Tecnologia. 
-        		Que tal aprender uma nova linguaguem de programação?<br>
-        		Ou quem sabe ensinar alguém a programar?
-        		Você também pode usar nosso forum para fazer uma perguntar aos usuarios da comunidade.</p><br>
-        		<input type="email" placeholder="Digite seu Email" id="emailCadastro">
-				<button class="btn btn-success" type="button" >Cadastre-se</button>
-        	</div>
+	
 
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="bd-placeholder-img" width="100%" height="100%" src="images/home/banner.png" >
+        <div class="container">
+			
+          <div class="carousel-caption-h text-left">
+		  <div class="col-md-6">
+            <h1>Entre já para a Educare++</h1>
+            <p>Uma comunidade para pessoas que se interessam por Tecnologia.</p>
+			<p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+			</div>
+			          </div>
         </div>
+      </div>
+    </div>
+  </div>
+      
         <div id="containerCard" class="container">
 	        <h1>Sobre a Plataforma:</h1>
 	        <div class="card-deck">
@@ -106,11 +112,7 @@
 		    <div id="buttonCursos">
 		       	<button class="btn btn-success" type="button" >Ver todos os Cursos</button>
 		    </div>
-		</div>
-    </div>  
-        <div class="container" id="containerForum">
-        	
-        </div>	
-    </div>
+		
+  
  
 @endsection
