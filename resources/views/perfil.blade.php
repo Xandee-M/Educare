@@ -70,6 +70,7 @@
 <!-- Post /////-->
 
 <!--- \\\\\\\Post-->
+@for ($i = 0; $i < 10; $i++)
 <div class="card gedf-card box-card">
     <div class="card-header">
         <div class="d-flex justify-content-between align-items-center">
@@ -112,6 +113,7 @@
         <a href="#" class="card-link"><i class="fa fa-comment"></i> Responder</a>
     </div>
 </div>
+@endfor
 
 <!-- Post /////-->
 
