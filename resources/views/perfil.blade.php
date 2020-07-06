@@ -89,7 +89,6 @@
                         <i class="fa fa-ellipsis-h"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
-                        <a class="dropdown-item" href="#">Seguir</a>
                         <a class="dropdown-item" href="#">Denunciar</a>
                     </div>
                 </div>
@@ -98,7 +97,7 @@
 
     </div>
     <div class="card-body">
-        <div class="text-muted h7 mb-2 text-white"> <i class="fa fa-clock-o"></i>10 min atras</div>
+        <div class="text-muted h7 mb-2 text-white"><i class="fas fa-user-clock"></i> </i>10 min atras</div>
         <a class="card-link" href="#">
             <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adip.</h5>
         </a>
@@ -109,7 +108,7 @@
         </p>
     </div>
     <div class="card-footer">
-        <a href="#" class="card-link"><i class="fa fa-gittip"></i> Curtir</a>
+        <a href="#" class="card-link"><i class="far fa-bell"></i> Seguir</a>
         <a href="#" class="card-link"><i class="fa fa-comment"></i> Responder</a>
     </div>
 </div>
