@@ -10,17 +10,17 @@
 @section('content')                                                                               
 	
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<div id="myCarousel" class="carousel slide backblue" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img class="bd-placeholder-img" width="100%" height="100%" src="images/home/banner.png" >
         <div class="container">
 			
-          <div class="carousel-caption-h text-left">
+          <div class="carousel-caption-h text-left ">
 		  <div class="col-md-6">
             <h1>Entre já para a Educare++</h1>
             <p>Uma comunidade para pessoas que se interessam por Tecnologia.</p>
-			<p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+			<p><a class="btn btn-lg btn-success" href="#" role="button">Cadastre-se</a></p>
 			</div>
 		</div>
         </div>
