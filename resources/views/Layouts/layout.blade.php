@@ -9,18 +9,19 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800">
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.css">
     <link rel="stylesheet" href="/css/style.css">
     <script src="/bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/css/layout.css">
+ 
 </head>
-<body>
+<body id="pagina">
 
 
-        <nav class="container-fluid borda">
+        <nav class="container-fluid">
             <div class="row">
                 <div class="col-lg-2">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="/">
                         <img class="img-fluid" src="../images/logo-educare.png" alt="logo-educare">
                     </a>
                 </div>
@@ -51,7 +52,8 @@
                     <li> <a href="#">Cursos</a> </li>
                     <li> <a href="#">Forum</a> </li>
                     <li> <a href="#">Quem Somos</a> </li>
-                </ul>                  
+                </ul>       
+                           
             </div>
         </div>
 
@@ -108,7 +110,29 @@
 				</div>
 			</div>
 		</footer>
-   
+        <div class="modal animate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body text-center p-lg">
+                    <form>
+<p>Escolha uma cor para o fundo da página</p>
+<input id="seletor_de_cores" type="color"/><br><br>
+<button type="button" onclick="mudar_cor_de_fundo()">Executar</button>
+</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
     <script src="/js/jquery-3.5.1.min.js"></script>
     <script src="/bootstrap/popper.min.js"></script>
     <script src="/js/bootstrap/bootstrap.min.js"></script>

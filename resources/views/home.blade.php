@@ -111,8 +111,9 @@
 		      </div>
 		    <div id="buttonCursos">
 		       	<button class="btn btn-success" type="button" >Ver todos os Cursos</button>
-		    </div>
-		
+			</div>
+</div>
+</div>
   
  
 @endsection

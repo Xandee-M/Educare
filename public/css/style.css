@@ -8,10 +8,10 @@
 /* Cor Secundaria #2995CF */
 
 body {
-    overflow-x: hidden;
+    overflow-x: hidden;background-color: #292929
   }
 
-html,body{width: 100%;height:100%;background-color: #292929;}
+html,body{width: 100%;height:100%;background-color: #292929}
 
 .text-white{color: #fff;}
 .theme-color{color: #2995CF;}
