@@ -9,10 +9,17 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800">
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.css">
     <link rel="stylesheet" href="/css/style.css">
     <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/layout.css">
 </head>
 <body>
+
+<!--<nav class="navbar navbar-expand-lg ">
+	<a class="navbar-brand" href="#"> <img class="logo" src="/images/logo-educare.png"></a>
+
+</nav>-->
     @yield('content')
     <script src="/js/jquery-3.4.1.min.js"></script>
     <script src="/js/custom.js"></script>

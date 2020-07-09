@@ -13,11 +13,9 @@
 @section('content')
 
 
-<section class="fundo-login">
-  <nav class="nav">
-    <a class="nav-login" href="#"><img src="/images/logo-educare.png" alt=""></a>
-  </nav>
-  <div class="container-fluid margin-login login-area">
+<section class="fundo-login pt-50">
+
+  <div class="container-fluid  login-area">
     <div class="row">
       <div class="col-lg-7">
         <div class="visual-padding">
@@ -26,52 +24,54 @@
         </div>
       </div>
       <div class="col-lg-5">
-        <div class="visual-padding">
-          <div class="tab-area">
-            <div class="tab-item activate">
-              <strong>Login</strong>
-            </div>
-            <div class="tab-item">
-              <strong>Cadastre-se</strong>
-            </div>
-          </div>
-
-
-          <div class="tab-content">
-            <form class="form-signin">
-              <h1 class="theme-color title mb-20">Login</h1>
-              <div class="form-label-group">
-                <input type="text" id="inputEmail" class="form-control" placeholder="Nome de usuário" required>
-                <label for="inputEmail"></label>
-              </div>
-              <div class="form-label-group mt-10">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
-                <label for="inputPassword"></label>
-              </div>
-              <div class="checkbox mb-3">
-                <input type="checkbox" value="remember-me"> Lembrar senha
-              </div>
-              <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
-            </form>
-          </div>
-          <div class="tab-content" style="display: none;">
-            <form class="form-signin">
-              <h1 class="theme-color title mb-20">Cadastre-se</h1>
-              <div class="form-label-group">
-                <input type="text" id="inputEmail" class="form-control" placeholder="Nome de usuário" required>
-                <label for="inputEmail"></label>
-              </div>
-              <div class="form-label-group mt-10">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
-                <label for="inputPassword"></label>
-              </div>
-              <div class="checkbox mb-3">
-                <input type="checkbox" value="remember-me"> Lembrar senha
-              </div>
-              <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
-            </form>
-          </div>
-        </div>
+      <div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label>
+		<input id="tab-2" type="radio" name="tab" class="for-pwd"><label for="tab-2" class="tab">Cadastro</label>
+		<div class="login-form">
+			<div class="sign-in-htm">
+				<div class="group">
+					<label for="user" class="label">Nome de usuário</label>
+					<input id="user" type="text" class="input">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Senha</label>
+					<input id="pass" type="password" class="input" data-type="password">
+				</div>
+				<div class="group">
+					<input type="submit" class="button" value="Login">
+				</div>
+				<div class="hr"></div>
+			</div>
+			<div class="for-pwd-htm">
+				<div class="group">
+					<label for="nome" class="label">Nome</label>
+					<input id="nome" type="text" class="input">
+				</div>
+        <div class="group">
+					<label for="user" class="label">Usuario</label>
+					<input id="user" type="text" class="input">
+				</div>
+        <div class="group">
+					<label for="email" class="label">E-mail</label>
+					<input id="email" type="text" class="input">
+				</div>
+        <div class="group">
+					<label for="pass" class="label">Senha</label>
+					<input id="pass" type="password" class="input" data-type="password">
+				</div>
+        <div class="group">
+					<label for="pass" class="label">Confirmar senha</label>
+					<input id="pass" type="password" class="input" data-type="password">
+				</div>
+				<div class="group">
+					<input type="submit" class="button" value="Reset Password">
+				</div>
+				<div class="hr"></div>
+			</div>
+		</div>
+	</div>
+</div>
       </div>
     </div>
   </div>

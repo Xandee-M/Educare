@@ -48,10 +48,10 @@
         <div id="wrapper" class="">
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav" id="homeMenu">
-                    <li> <a href="#"> Home</a> </li>
-                    <li> <a href="#">Cursos</a> </li>
-                    <li> <a href="#">Forum</a> </li>
-                    <li> <a href="#">Quem Somos</a> </li>
+                    <li> <a href="/">Home</a> </li>
+                    <li> <a href="/forum">Fórum</a> </li>
+                    <li> <a href="/perfil">Perfil</a> </li>
+                    <li> <a href="/login">Login</a> </li>
                 </ul>       
                            
             </div>
