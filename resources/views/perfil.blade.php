@@ -18,12 +18,12 @@
 </div>
 <div class="container">
   <div class="row">
-    <div class="col-lg-2">
+    <div class="col-lg-2 col-sm-12">
       <div class="box-perfil-p">
         <img src="https://picsum.photos/140/140" class="img-fluid perfil-p" alt="Fulando de tal progile">
       </div>
     </div>
-    <div class="col-lg-9">
+    <div class="col-lg-9 col-md-12 col-sm-12">
       <div class="profile-info ">
           <h2 class="theme-color mb-0">Fulano de tal</h2>
           <a href="#">@_FulanodTal</a>
