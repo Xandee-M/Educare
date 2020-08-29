@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="Author" content="Equipe Educare++" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="csrf-token" content="{{ csrf_token() }}">
     @yield('header')
     <link rel="icon" href="images/favicon-educare.png" type="image"/>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,600&display=swap" rel="stylesheet">
@@ -16,6 +17,12 @@
  
 </head>
 <body id="pagina">
+
+
+						
+
+
+
 
 
         <nav class="container-fluid">
@@ -47,12 +54,44 @@
          </nav>        
         <div id="wrapper" class="">
             <div id="sidebar-wrapper">
-                <ul class="sidebar-nav" id="homeMenu">
+                <!-- <ul class="sidebar-nav" id="homeMenu">
                     <li> <a href="/">Home</a> </li>
                     <li> <a href="/forum">Fórum</a> </li>
                     <li> <a href="/perfil">Perfil</a> </li>
                     <li> <a href="/login">Login</a> </li>
-                </ul>       
+                </ul>        -->
+				@guest
+                            <li>
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li >
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="/perfil"
+                                       >
+                                    Ver Pefil
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
                            
             </div>
         </div>

@@ -25,7 +25,7 @@
     </div>
     <div class="col-lg-9 col-md-12 col-sm-12">
       <div class="profile-info ">
-          <h2 class="theme-color mb-0">Fulano de tal</h2>
+          <h2 class="theme-color mb-0">{{ Auth::user()->name }}</h2>
           <a href="#">@_FulanodTal</a>
           <p class="text-white">Aqui você pode deixar suas dúvidas, compartilhar conteúdo e encontrar soluções.</p>
 

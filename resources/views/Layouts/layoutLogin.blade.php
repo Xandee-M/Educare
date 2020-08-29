@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="Author" content="Equipe Educare++" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     @yield('header')
     <link rel="icon" href="images/favicon-educare.png" type="image"/>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,600&display=swap" rel="stylesheet">
