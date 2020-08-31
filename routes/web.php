@@ -12,12 +12,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/', 'PrimarioController@home');
 Route::get('/login', 'PrimarioController@login');
-Route::get('/forum', 'PrimarioController@forum');
 Route::get('/perfil', 'PrimarioController@perfil');
 
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index');
+Route::get('/forum', 'HomeController@forum');

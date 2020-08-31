@@ -25,76 +25,58 @@
 
 
 
-        <nav class="container-fluid">
-            <div class="row">
-                <div class="col-lg-2">
-                    <a class="navbar-brand" href="/">
-                        <img class="img-fluid" src="../images/logo-educare.png" alt="logo-educare">
-                    </a>
-                </div>
-                <div class="col-lg-8">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">&nbsp;</label>
-                        <div class="input-group mb-2">
-                            
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-info" type="button">Pesquisar</button>
-                            </div>
-                        </div>  
-                    </div>              
-                </div>
-                <div class="col-lg-2">
-            
-                    <div class="box-perfil">      
-                        <a href="#menu-toggle" id="menu-toggle" class="navbar-brand"><img class="perfil" src="../images/perfil.jpg" alt="logo-educare"></a>         
-                    </div>
-                </div>                
-            </div> 
-         </nav>        
-        <div id="wrapper" class="">
-            <div id="sidebar-wrapper">
-                <!-- <ul class="sidebar-nav" id="homeMenu">
-                    <li> <a href="/">Home</a> </li>
-                    <li> <a href="/forum">Fórum</a> </li>
-                    <li> <a href="/perfil">Perfil</a> </li>
-                    <li> <a href="/login">Login</a> </li>
-                </ul>        -->
-				@guest
-                            <li>
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li>
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li >
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="/perfil"
-                                       >
-                                    Ver Pefil
-                                    </a>
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+<nav class="navbar navbar-expand bg-primary position-relative shadow-sm">
+	<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+			<li class="nav-item">
+				<a class="nav-link text-white" href="/"><img src="images/logo-educare.png" alt=""></a>
+			</li>
+		</ul>
+		<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+			<li class="nav-item">
+				<a class="nav-link search-button text-white" href="#"><i class="fa fa-search"></i>Pesquisar</a>
+			</li>
+			<li class="nav-item">
+            <div class="ml-2">
+            @guest
+            @else
+                                    <div class="h5 m-0">{{ Auth::user()->name }}</div>
+                                    <div class="h7 text-muted">Miracles Lee Cross</div>
+                                </div>
+                                
+            </li> 
+            <li class="nav-item">
+            <div>
+                                <div class="dropdown">
+                                    <button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-ellipsis-h"></i>
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
+                                        <div class="h6 dropdown-header">Configuration</div>
+                                        <a class="dropdown-item" href="/perfil">Ver Pefil</a>
+                                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        </a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
+                                    </div>
                                 </div>
-                            </li>
-                        @endguest
-                           
-            </div>
-        </div>
+                                @endguest
+                            </div>
+                                
+			</li>   
+		</ul>
+	</div>
+	
+	<div class="search-bar d-flex bg-white position-absolute w-100 h-100" style="overflow: hidden; max-width:0px; transition: all 0.2s ease-in-out; opacity: 0;">
+		<a href="#" class="search-back text-dark d-flex align-items-center text-decoration-none">
+			<i class="fa fa-arrow-back px-3">arrow_back</i>
+		</a>
+		<input type="text" class="form-control border-0 rounded-0 w-100 h-100" placeholder="Pesquisar..." />
+	</div>
+</nav>      
+        
 
     @yield('content')
 

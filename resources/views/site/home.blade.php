@@ -1,119 +1,156 @@
-@extends('layouts.layout')
+@extends('layouts.layoutHome')
 @section('header')
     <title>Home | Educare++</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta property="og:title" content="">
     <meta property="og:description" content="">
-    <link rel="stylesheet" href="/css/home.css">
+	<link rel="stylesheet" href="/css/home.css">
+	
 @endsection
 @section('content')                                                                               
-	
 
-<div id="myCarousel" class="carousel slide backblue" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="bd-placeholder-img" width="100%" height="100%" src="images/home/banner.png" >
-        <div class="container">
-			
-          <div class="carousel-caption-h text-left ">
-		  <div class="col-md-6">
-            <h1>Entre já para a Educare++</h1>
-            <p>Uma comunidade para pessoas que se interessam por Tecnologia.</p>
-			<p><a class="btn btn-lg btn-success" href="#" role="button">Cadastre-se</a></p>
+	<section class="banner">
+		<div class="overlay"></div>
+			<div class="tophead" >
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-7 ">
+							<h1 class="title-main " >Educare++</h1>
+							<h3 class="subtitle-main " >Lorem ipsum dolor sit amet consectetur adipiscing elit proin leo leo ornare nec vulputate tempus velit nam id purus tellus hendrerit mi dapibus.</h3>
+							<div class="separador ">
+								<a href="/login" class="btn-login ">Login</a>
+								<a href="/register" class="btn-cadastro ">Cadastre-se</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
-        </div>
-      </div>
-    </div>
-  </div>
-      
-        <div id="containerCard" class="container">
-	        <h1>Sobre a Plataforma:</h1>
-	        <div class="card-deck">
-	            <div class="card shadow mb-5">
-	                <div class="img-card">
-	                    <img src="../images/team.png" href="#" class="rounded-circle center" alt="produto">
-	                </div>
-	                <div class="card-body">
-	                    <h5 class="card-title">A Comunidade</h5>
-	                    <p class="card-text">A Educare++ é uma comunidade para pessoas que se interessam por Tecnologia.</p>
-	                </div>
-	            </div>
-	            <div class="card shadow mb-5">
-	                <div class="img-card">
-	                    <img src="../images/curso.png" href="/cursos" class="rounded-circle center" alt="Cursos-Online">
-	                </div>
-	                <div class="card-body">
-	                    <h5 class="card-title">Cursos Online</h5>
-	                    <p class="card-text">Faça cursos online disponibilizado por pessoas que utilizam a comunidade.</p>
-	                </div>
-	            </div>
-	            <div class="card shadow mb-5">
-	                <div class="img-card">
-	                    <img src="../images/forum.png" href="/forum" class="rounded-circle center"  alt="Forum">
-	                </div>
-	                <div class="card-body">
-	                    <h5 class="card-title">Forum</h5>
-	                    <p class="card-text">Disponibilizamos um forum exclusivo para que a comunidade consiga se comunicar e se ajudar.</p>
-	                </div>
-	            </div>
-	        </div>
-        </div>
-        <div class="container-fluid" id="containerCursos">
-	        <div class="container" >
-	        	<br><br><h1>Cursos em Destaque:</h1><br>
-		      <div class="card-deck">
-		        <div class="card">
-		          <div class="item">
-		            <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" alt="Curso HTML5">
-		          </div>
-		          <div class="border-effect bg-warning"></div>
-		          <div class="card-body">
-		            <h4 class="card-title">HTML5</h4>
-		            <p class="card-text"><span class="green">Gratuito</span></p>
-		            <button class="btn btn-outline-info" type="button" >Acessar Curso</button>
-		          </div>
-		        </div>
-		        <div class="card">
-		          <div class="item">
-		            <img class="card-img-top" src="https://i0.wp.com/www.tutorialwebdesign.com.br/wp-content/uploads/2015/07/css3.jpg?fit=250%2C237&ssl=1" alt="Curso HTML5">
-		          </div>
-		          <div class="border-effect bg-warning"></div>
-		          <div class="card-body">
-		            <h4 class="card-title">CSS3</h4>
-		            <p class="card-text"><span class="green">Gratuito</span></p>
-		            <button class="btn btn-outline-info" type="button" >Acessar Curso</button>
-		          </div>
-		        </div>
-		        <div class="card">
-		          <div class="item">
-		            <img class="card-img-top" src="https://sujeitoprogramador.com/wp-content/uploads/2019/08/jsjsjs.png" alt="Curso HTML5">
-		          </div>
-		          <div class="border-effect bg-warning"></div>
-		          <div class="card-body">
-		            <h4 class="card-title">JAVASCRIPT</h4>
-		            <p class="card-text"><span class="green">Gratuito</span></p>
-		            <button class="btn btn-outline-info" type="button" >Acessar Curso</button>
-		          </div>
-		        </div>
-		        <div class="card">
-		          <div class="item">
-		            <img class="card-img-top" src="https://jonathasguerra.com.br/blog/wp-content/uploads/2015/06/php7.jpeg" alt="Curso HTML5">
-		          </div>
-		          <div class="border-effect bg-warning"></div>
-		          <div class="card-body">
-		            <h4 class="card-title">PHP7</h4>
-		            <p class="card-text"><span class="green">Gratuito</span></p>
-		            <button class="btn btn-outline-info" type="button" >Acessar Curso</button>
-		          </div>
-		        </div><br>
-		      </div>
-		    <div id="buttonCursos">
-		       	<button class="btn btn-success" type="button" >Ver todos os Cursos</button>
-			</div>
-</div>
-</div>
+		<div class="angulo"></div>
+	</section>
+        <section class="sobre-wrap">
+            <div class="container">
+                <div class="contenedor">
+                    <h2 class="title-sobre ">Aqui você encontra</h2>
+                    <p class="subtitle-sobre ">Lorem ipsum dolor sit amet consectetur adipiscing elit proin leo leo ornare nec vulputate tempus velit nam id purus tellus hendrerit mi dapibus</p>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3 wow bounceInUp" >
+                            <div class="sobre-box mx-auto">
+                                <div class="icones d-flex">
+                                    <i class="fab fa-html5 fa-5x html5 m-auto"></i>
+                                </div>
+                                <h5>Html 5</h5>
+                                <p class=" mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit proin leo ornare!</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 wow bounceInUp">
+                            <div class="sobre-box mx-auto">
+                                <div class="icones d-flex">
+                                    <i class="fab fa-css3 fa-5x css3 m-auto"></i>
+                                </div>
+                                <h5>CSS 3</h5>
+                                <p class=" mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit proin leo ornare!</p>
+                            </div>
+                        </div>
+                       <div class="col-md-6 col-lg-3 wow bounceInUp" >
+                            <div class="sobre-box mx-auto">
+                                <div class="icones d-flex">
+                                    <i class="fab fa-android fa-5x android m-auto"></i>
+                                </div>
+                                <h5>Android</h5>
+                                <p class=" mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit proin leo ornare!</p>
+                            </div>
+                        </div>
+                       <div class="col-md-6 col-lg-3 wow bounceInUp">
+                            <div class="sobre-box mx-auto">
+                                <div class="icones d-flex">
+                                    <i class="fab fa-php fa-5x drupal m-auto"></i>
+                                </div>
+                                <h5>PHP</h5>
+                                <p class=" mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit proin leo ornare!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                  
+                </div>
+            </div>
+        </section>
+ 
+		
+		<!--Our Team-->
+        <section class="time" id="team">
+            <div class="container">
+                <h2 class="title-time ">Nossos Fundadores</h2>
+                <p class="subtitle-time ">Lorem ipsum dolor sit amet consectetur adipiscing elit proin leo leo ornare nec vulputate tempus velit nam id purus tellus hendrerit mi dapibus</p>
+
+                <ul class="row">
+                    <li class="col-12 col-md-6 col-lg-3 " >
+                        <div class="mycard-block equal-hight">
+                            <figure><img src="https://picsum.photos/950/650" class="img-fluid" alt=""></figure>
+                            <h3><a href="javascript:void(0)">Alexandre Muniz</a></h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                            <ul class="follow-us clearfix">
+                                <li><a href="#" class="btn btn-circle my-social-btn fb"><i class="fab fa-facebook " ></i></a></li>
+                                <li><a href="#" class="btn btn-circle my-social-btn twitter"><i class="fab fa-twitter " ></i></a></li>
+                                <li><a href="#" class="btn btn-circle my-social-btn google"><i class="fab fa-linkedin " ></i></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="col-12 col-md-6 col-lg-3 " >
+                        <div class="mycard-block equal-hight">
+						<figure><img src="https://picsum.photos/950/650" class="img-fluid" alt=""></figure>
+                            <h3><a href="javascript:void(0)">Thiago Mozarte</a></h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                            <ul class="follow-us clearfix">
+                                <li><a href="#" class="btn btn-circle my-social-btn fb"><i class="fab fa-facebook " ></i></a></li>
+                                <li><a href="#" class="btn btn-circle my-social-btn twitter"><i class="fab fa-twitter " ></i></a></li>
+                                <li><a href="#" class="btn btn-circle my-social-btn google"><i class="fab fa-linkedin " ></i></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="col-12 col-md-6 col-lg-3 " >
+                        <div class="mycard-block equal-hight" >
+						<figure><img src="https://picsum.photos/950/650" class="img-fluid" alt=""></figure>
+                            <h3><a href="javascript:void(0)">Kenny Almeida</a></h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                            <ul class="follow-us clearfix">
+                                <li><a href="#" class="btn btn-circle my-social-btn fb"><i class="fab fa-facebook " ></i></a></li>
+                                <li><a href="#" class="btn btn-circle my-social-btn twitter"><i class="fab fa-twitter " ></i></a></li>
+                                <li><a href="#" class="btn btn-circle my-social-btn google"><i class="fab fa-linkedin " ></i></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="col-12 col-md-6 col-lg-3 ">
+                        <div class="mycard-block equal-hight" >
+						<figure><img src="https://picsum.photos/950/650" class="img-fluid" alt=""></figure>
+                            <h3><a href="javascript:void(0)">Marcos Simões</a></h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                            <ul class="follow-us clearfix">
+                                <li><a href="#" class="btn btn-circle my-social-btn fb"><i class="fab fa-facebook " ></i></a></li>
+                                <li><a href="#" class="btn btn-circle my-social-btn twitter"><i class="fab fa-twitter " ></i></a></li>
+                                <li><a href="#" class="btn btn-circle my-social-btn google"><i class="fab fa-linkedin " ></i></a></li>
+                            </ul>
+                        </div>
+					</li>
+					<li class="col-12 col-md-6 col-lg-3 ">
+                        <div class="mycard-block equal-hight" >
+						<figure><img src="https://picsum.photos/950/650" class="img-fluid" alt=""></figure>
+                            <h3><a href="javascript:void(0)">João</a></h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                            <ul class="follow-us clearfix">
+                                <li><a href="#" class="btn btn-circle my-social-btn fb"><i class="fab fa-facebook " ></i></a></li>
+                                <li><a href="#" class="btn btn-circle my-social-btn twitter"><i class="fab fa-twitter " ></i></a></li>
+                                <li><a href="#" class="btn btn-circle my-social-btn google"><i class="fab fa-linkedin " ></i></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+  
   
  
 @endsection

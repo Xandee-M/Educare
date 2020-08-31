@@ -6,12 +6,20 @@
 
 /* Cor Principal #292929 */
 /* Cor Secundaria #2995CF */
+*{
+  margin: 0;
+  padding: 0;
+}
+html {
+scroll-behavior: smooth;
+}
+h1,h2,h3,h4,h5,h6{margin:0;}
 
 body {
-    overflow-x: hidden;background-color: #292929
+    overflow-x: hidden;background-color: #fff
   }
 
-html,body{width: 100%;height:100%;background-color: #292929}
+html,body{width: 100%;height:100%;background-color: #fff}
 
 .text-white{color: #fff;}
 .theme-color{color: #2995CF;}
@@ -23,3 +31,8 @@ html,body{width: 100%;height:100%;background-color: #292929}
 textarea{background-color: #ffffff00 !important;}
 
 
+.full-section{height: 100vh;}
+.full-section .container{height: 100%;}
+.full-section .container .row{height: 100%;}
+
+.image-section{background-size: contain;background-position-y: center;background-repeat: no-repeat;}
