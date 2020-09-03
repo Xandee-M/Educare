@@ -84,68 +84,38 @@
                 <h2 class="title-time ">Nossos Fundadores</h2>
                 <p class="subtitle-time ">Lorem ipsum dolor sit amet consectetur adipiscing elit proin leo leo ornare nec vulputate tempus velit nam id purus tellus hendrerit mi dapibus</p>
 
-                <ul class="row">
-                    <li class="col-12 col-md-6 col-lg-3 " >
-                        <div class="mycard-block equal-hight">
-                            <figure><img src="https://picsum.photos/950/650" class="img-fluid" alt=""></figure>
-                            <h3><a href="javascript:void(0)">Alexandre Muniz</a></h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                            <ul class="follow-us clearfix">
-                                <li><a href="#" class="btn btn-circle my-social-btn fb"><i class="fab fa-facebook " ></i></a></li>
-                                <li><a href="#" class="btn btn-circle my-social-btn twitter"><i class="fab fa-twitter " ></i></a></li>
-                                <li><a href="#" class="btn btn-circle my-social-btn google"><i class="fab fa-linkedin " ></i></a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="col-12 col-md-6 col-lg-3 " >
-                        <div class="mycard-block equal-hight">
-						<figure><img src="https://picsum.photos/950/650" class="img-fluid" alt=""></figure>
-                            <h3><a href="javascript:void(0)">Thiago Mozarte</a></h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                            <ul class="follow-us clearfix">
-                                <li><a href="#" class="btn btn-circle my-social-btn fb"><i class="fab fa-facebook " ></i></a></li>
-                                <li><a href="#" class="btn btn-circle my-social-btn twitter"><i class="fab fa-twitter " ></i></a></li>
-                                <li><a href="#" class="btn btn-circle my-social-btn google"><i class="fab fa-linkedin " ></i></a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="col-12 col-md-6 col-lg-3 " >
-                        <div class="mycard-block equal-hight" >
-						<figure><img src="https://picsum.photos/950/650" class="img-fluid" alt=""></figure>
-                            <h3><a href="javascript:void(0)">Kenny Almeida</a></h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                            <ul class="follow-us clearfix">
-                                <li><a href="#" class="btn btn-circle my-social-btn fb"><i class="fab fa-facebook " ></i></a></li>
-                                <li><a href="#" class="btn btn-circle my-social-btn twitter"><i class="fab fa-twitter " ></i></a></li>
-                                <li><a href="#" class="btn btn-circle my-social-btn google"><i class="fab fa-linkedin " ></i></a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="col-12 col-md-6 col-lg-3 ">
-                        <div class="mycard-block equal-hight" >
-						<figure><img src="https://picsum.photos/950/650" class="img-fluid" alt=""></figure>
-                            <h3><a href="javascript:void(0)">Marcos Simões</a></h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                            <ul class="follow-us clearfix">
-                                <li><a href="#" class="btn btn-circle my-social-btn fb"><i class="fab fa-facebook " ></i></a></li>
-                                <li><a href="#" class="btn btn-circle my-social-btn twitter"><i class="fab fa-twitter " ></i></a></li>
-                                <li><a href="#" class="btn btn-circle my-social-btn google"><i class="fab fa-linkedin " ></i></a></li>
-                            </ul>
-                        </div>
-					</li>
-					<li class="col-12 col-md-6 col-lg-3 ">
-                        <div class="mycard-block equal-hight" >
-						<figure><img src="https://picsum.photos/950/650" class="img-fluid" alt=""></figure>
-                            <h3><a href="javascript:void(0)">João</a></h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-                            <ul class="follow-us clearfix">
-                                <li><a href="#" class="btn btn-circle my-social-btn fb"><i class="fab fa-facebook " ></i></a></li>
-                                <li><a href="#" class="btn btn-circle my-social-btn twitter"><i class="fab fa-twitter " ></i></a></li>
-                                <li><a href="#" class="btn btn-circle my-social-btn google"><i class="fab fa-linkedin " ></i></a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
+                <div class="row active-with-click">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-5">
+                        <article class="material-card Red">
+                            <h2>
+                                <span>Siddharth Panchal</span>
+                                <strong>
+                                    <i class="fa fa-fw fa-magic"></i>
+                                    Front-End-Developer
+                                </strong>
+                            </h2>
+                            <div class="mc-content">
+                                <div class="img-container">
+                                    <img class="img-fluid" src="https://www.w3schools.com/bootstrap4/img_avatar1.png" alt="" draggable="false" oncontextmenu="return false;" />
+                                </div>
+                                <div class="mc-description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ...
+                                </div>
+                            </div>
+                            <a class="mc-btn-action ripple">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                            <div class="mc-footer">
+                                <h4>
+                                    Social
+                                </h4>
+                                <a target="_parent" href="#!" class="fa fa-fw fa-facebook ripple"></a>
+                                <a target="_parent" href="#!"  class="fa fa-fw fa-twitter ripple"></a>
+                                <a target="_parent" href="#!"  class="fa fa-fw fa-linkedin ripple"></a>
+                                <a target="_parent" href="#!"  class="fa fa-fw fa-google-plus ripple"></a>
+                            </div>
+                        </article>
+                    </div>
             </div>
         </section>
 

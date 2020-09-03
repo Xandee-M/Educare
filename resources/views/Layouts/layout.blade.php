@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <script src="/bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/css/layout.css">
+	
  
 </head>
 <body id="pagina">
@@ -21,62 +22,65 @@
 
 						
 
-
-
-
-
-<nav class="navbar navbar-expand bg-primary position-relative shadow-sm">
-	<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-			<li class="nav-item">
-				<a class="nav-link text-white" href="/"><img src="images/logo-educare.png" alt=""></a>
-			</li>
-		</ul>
-		<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-			<li class="nav-item">
-				<a class="nav-link search-button text-white" href="#"><i class="fa fa-search"></i>Pesquisar</a>
-			</li>
-			<li class="nav-item">
-            <div class="ml-2">
-            @guest
-            @else
-                                    <div class="h5 m-0">{{ Auth::user()->name }}</div>
-                                    <div class="h7 text-muted">Miracles Lee Cross</div>
-                                </div>
-                                
-            </li> 
-            <li class="nav-item">
-            <div>
-                                <div class="dropdown">
-                                    <button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fa fa-ellipsis-h"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
-                                        <div class="h6 dropdown-header">Configuration</div>
-                                        <a class="dropdown-item" href="/perfil">Ver Pefil</a>
-                                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+<nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+	<div class="container-fluid">
+		<a class="h4 mb-0 text-uppercase d-none d-lg-inline-block" href="/" >Logo</a>
+		<!-- Form -->
+		<form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
+			<div class="form-group mb-0">
+				 <div class="input-group input-group-alternative">
+					<div class="input-group-prepend">
+						<span class="input-group-text"><i class="fas fa-search"></i></span>
+					</div>
+					<input class="form-control" placeholder="Pesquisar" type="text">
+				</div>
+			</div>
+		</form>
+		<!-- User -->
+		
+		
+		<ul class="navbar-nav align-items-center d-none d-md-flex">
+		<li>
+                                        <a href="#" class="icon-info">
+                                            <i class="fa fa-bell" aria-hidden="true"></i>
+                                            <span class="label label-primary">3</span>
                                         </a>
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                    </div>
-                                </div>
-                                @endguest
-                            </div>
-                                
-			</li>   
+                                    </li>
+			<li class="nav-item dropdown">
+				<a id="click_advance" class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<div class="media align-items-center">
+						<span class="avatar avatar-sm rounded-circle">
+							<img alt="Image placeholder" src="https://picsum.photos/140/140">
+						</span>
+						<div class="media-body ml-2 d-none d-lg-block">
+							<span class="mb-0 text-sm navname font-weight-bold">{{ Auth::user()->user }} <i class="fas fa-sort-down"></i></span>
+						</div>
+					</div>
+				</a>
+				<div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">	
+				@guest
+				@else				
+					<a href="/perfil/{{ Auth::user()->slug }}" class="dropdown-item">
+						<span>Meu perfil</span>
+					</a>
+					<a href="#" class="dropdown-item">
+						<span>Configurações</span>
+					</a>			
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                       Sair
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+					@csrf
+					</form>
+				@endguest
+				</div>
+			</li>		
 		</ul>
 	</div>
-	
-	<div class="search-bar d-flex bg-white position-absolute w-100 h-100" style="overflow: hidden; max-width:0px; transition: all 0.2s ease-in-out; opacity: 0;">
-		<a href="#" class="search-back text-dark d-flex align-items-center text-decoration-none">
-			<i class="fa fa-arrow-back px-3">arrow_back</i>
-		</a>
-		<input type="text" class="form-control border-0 rounded-0 w-100 h-100" placeholder="Pesquisar..." />
-	</div>
-</nav>      
-        
+</nav>
+
+
 
     @yield('content')
 

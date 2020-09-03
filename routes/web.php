@@ -14,9 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', 'PrimarioController@home');
 Route::get('/login', 'PrimarioController@login');
-Route::get('/perfil', 'PrimarioController@perfil');
+
 
 
 Auth::routes();
 
 Route::get('/forum', 'HomeController@forum');
+Route::get('/perfil/{user_tag}', 'UsuarioController@getIndex');

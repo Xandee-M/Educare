@@ -25,9 +25,40 @@
     </div>
     <div class="col-lg-9 col-md-12 col-sm-12">
       <div class="profile-info ">
-          <h2 class="theme-color mb-0">{{ Auth::user()->name }}</h2>
-          <a href="#">@_FulanodTal</a>
-          <p class="text-white">Aqui você pode deixar suas dúvidas, compartilhar conteúdo e encontrar soluções.</p>
+            <h2 class="theme-color mb-0">
+                <a href="/perfil/{{ $user->slug }}">
+                    {{ $user->user }}
+                </a>
+                <a type="button" data-toggle="modal" data-target="#myModal"><i class="fas fa-edit"></i></a>
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-center">
+                        <div class="modal-dialog .modal-align-center">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>                
+                                </div>
+                                <div class="modal-body">	@guest
+				@else				
+					<a href="/perfil/{{ Auth::user()->slug }}" class="dropdown-item">
+						<span>Meu perfil</span>
+					</a>
+					<a href="#" class="dropdown-item">
+						<span>Configurações</span>
+					</a>			
+					
+				@endguest</div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </h2>
+          <p class="theme-color">{{ $user->name }}</p>
+          <p class="">Aqui você pode deixar suas dúvidas, compartilhar conteúdo e encontrar soluções.</p>
 
       </div>
       
@@ -79,8 +110,8 @@
                     <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
                 </div>
                 <div class="ml-2">
-                    <div class="h5 m-0 theme-color">@_FulanodTal</div>
-                    <div class="h7 text-muted">Fulano de tal</div>
+                    <div class="h5 m-0 theme-color">{{ $user->user }}</div>
+                    <div class="h7 text-muted">{{ $user->name }}</div>
                 </div>
             </div>
             <div>
@@ -97,12 +128,12 @@
 
     </div>
     <div class="card-body">
-        <div class="text-muted h7 mb-2 text-white"><i class="fas fa-user-clock"></i> </i>10 min atras</div>
+        <div class="text-muted h7 mb-2 "><i class="fas fa-user-clock"></i> </i>10 min atras</div>
         <a class="card-link" href="#">
             <h5 class="card-title">Lorem ipsum dolor sit amet, consectetur adip.</h5>
         </a>
 
-        <p class="card-text text-white">
+        <p class="card-text ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo recusandae nulla rem eos ipsa praesentium esse magnam nemo dolor
             sequi fuga quia quaerat cum, obcaecati hic, molestias minima iste voluptates.
         </p>
