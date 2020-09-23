@@ -18,7 +18,7 @@ class CriaTabelaPerguntas extends Migration
             $table->unsignedBigInteger("usuario_id");
             $table->string("titulo", 200);
             $table->text("pergunta");
-            $table->integer("avaliacao", 2)->nullable();
+            $table->integer("avaliacao")->nullable();
             $table->string("imagem")->nullable();
             $table->timestamps();
             $table->foreign("usuario_id")->references("id")->on("users")->onDelete("no action")->onUpdate("no action");
