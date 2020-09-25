@@ -34,7 +34,7 @@
             </div>
           </div>
           <!-- Navbar items -->
-       
+
         </div>
       </div>
     </nav>
@@ -42,7 +42,7 @@
     <div class="header bg-primary py-7 py-lg-8">
       <div class="container">
         <div class="header-body text-center">
-          
+
         </div>
       </div>
       <div class="separator separator-bottom separator-skew zindex-100">
@@ -57,21 +57,21 @@
       <div class="row justify-content-center">
         <div class="col-lg-6 col-md-8">
           <div class="card bg-secondary shadow border-0">
-           
+
             <div class="card-body px-lg-5 py-lg-5">
               <div class="text-center text-muted mb-4">
                 <small>Or sign up with credentials</small>
               </div>
-              <form method="POST" action="{{ route('login') }}">
+              <form method="POST" action="/login">
               @csrf
                 <div class="form-group">
                   <div class="input-group input-group-alternative mb-3">
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
                     </div>
-                 
-                    <input class="form-control" placeholder="Name" type="text">
-                 
+
+                    <input class="form-control" name="nome" placeholder="Name" type="nome">
+
                   </div>
                 </div>
                 <div class="form-group">
@@ -79,7 +79,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Email" type="email">
+                    <input class="form-control" name="email" placeholder="Email" type="email">
                   </div>
                 </div>
                 <div class="form-group">
@@ -87,7 +87,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Password" type="password">
+                    <input class="form-control" name="password" placeholder="Password" type="password">
                   </div>
                 </div>
                 <div class="text-muted font-italic"><small>password strength: <span class="text-success font-weight-700">strong</span></small></div>
@@ -123,9 +123,8 @@
             © 2020 <a href="" class="font-weight-bold ml-1" target="_blank">Educare++</a>
           </div>
         </div>
-      
+
       </div>
     </div>
   </footer>
 </body>
-

@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/fontawesome/css/all.css">
     <link rel="stylesheet" href="/css/style.css">
-    <script src="/bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/css/layout.css">
 </head>
 <body>
@@ -23,6 +22,7 @@
 </nav>-->
     @yield('content')
     <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
     <script src="/js/custom.js"></script>
 </body>
 </html>
