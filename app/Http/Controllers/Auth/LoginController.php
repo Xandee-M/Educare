@@ -38,6 +38,6 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
     public function do_login($request){
-      $credenciais = $request->only(['nome', 'email', 'password']);
+      $credenciais = $request->only(['nome','email', 'password']);
     }
 }
