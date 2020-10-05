@@ -6,9 +6,9 @@
     <meta property="og:title" content="">
     <meta property="og:description" content="">
 	<link rel="stylesheet" href="/css/home.css">
-	
+
 @endsection
-@section('content')                                                                               
+@section('content')
 
 	<section class="banner">
 		<div class="overlay"></div>
@@ -33,7 +33,7 @@
                 <div class="contenedor">
                     <h2 class="title-sobre ">Aqui você encontra</h2>
                     <p class="subtitle-sobre ">Lorem ipsum dolor sit amet consectetur adipiscing elit proin leo leo ornare nec vulputate tempus velit nam id purus tellus hendrerit mi dapibus</p>
-                    <div class="row">
+                    <div class="row justify-content-center">
                         <div class="col-md-6 col-lg-3 wow bounceInUp" >
                             <div class="sobre-box mx-auto">
                                 <div class="icones d-flex">
@@ -61,6 +61,24 @@
                                 <p class=" mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit proin leo ornare!</p>
                             </div>
                         </div>
+                        <div class="col-md-6 col-lg-3 wow bounceInUp" >
+                             <div class="sobre-box mx-auto">
+                                 <div class="icones d-flex">
+                                     <i class="fab fa-android fa-5x android m-auto"></i>
+                                 </div>
+                                 <h5>Android</h5>
+                                 <p class=" mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit proin leo ornare!</p>
+                             </div>
+                         </div>
+                         <div class="col-md-6 col-lg-3 wow bounceInUp" >
+                              <div class="sobre-box mx-auto">
+                                  <div class="icones d-flex">
+                                      <i class="fab fa-android fa-5x android m-auto"></i>
+                                  </div>
+                                  <h5>Android</h5>
+                                  <p class=" mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit proin leo ornare!</p>
+                              </div>
+                          </div>
                        <div class="col-md-6 col-lg-3 wow bounceInUp">
                             <div class="sobre-box mx-auto">
                                 <div class="icones d-flex">
@@ -72,12 +90,12 @@
                         </div>
                     </div>
 
-                  
+
                 </div>
             </div>
         </section>
- 
-		
+
+
 		<!--Our Team-->
         <section class="time" id="team">
             <div class="container">
@@ -120,7 +138,7 @@
         </section>
 
 
-  
-  
- 
+
+
+
 @endsection
