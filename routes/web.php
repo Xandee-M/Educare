@@ -13,9 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', 'PrimarioController@home');
-Route::get('/login', 'PrimarioController@login');
-Route::post('/login','LoginController@do_login');
-
 
 Auth::routes();
 

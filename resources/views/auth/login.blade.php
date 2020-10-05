@@ -64,16 +64,19 @@
               </div>
               <form method="POST" action="/login">
               @csrf
-                <div class="form-group">
-                  <div class="input-group input-group-alternative mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
-                    </div>
 
-                    <input class="form-control" name="nome" placeholder="Name" type="nome">
-
-                  </div>
-                </div>
+              @error('email')
+          <div class="alert alert-danger alert-block"role="alert" id="alert">
+              <button type="button" class="close" data-dismiss="alert">×</button>
+                  {{ $errors->default->first('email') }}
+          </div>
+          @enderror
+          @error('password')
+      <div class="alert alert-danger alert-block"role="alert" id="alert">
+          <button type="button" class="close" data-dismiss="alert">×</button>
+              {{ $errors->default->first('password') }}
+      </div>
+      @enderror
                 <div class="form-group">
                   <div class="input-group input-group-alternative mb-3">
                     <div class="input-group-prepend">
