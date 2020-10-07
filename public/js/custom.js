@@ -1,45 +1,26 @@
-$(document).ready(function(){
-	$('body').on('click', '.search-button', function(e){
-		e.preventDefault();
-		$('.search-bar').css({'max-width':'100%', 'opacity': '1'});
-		$('.search-bar input').focus();
+
+
+	var form = $('#ajax_form');
+	form.submit(function(event){
+			event.preventDefault();
+			var form_status = $('<div class="form_status"></div>');
+			$.ajax({
+					url: "/pub",
+					data: $( form ).serialize(),
+					type: 'post',	
+					beforeSend: function(){
+						form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Enviando duvida ...</p>').fadeIn() );
+					}				
+			}).done(function(data){
+					form_status.html('<p class="text-success">' + 'Duvida cadastrada com sucesso' + '</p>').delay(3000).fadeOut();
+
+					$('#ajax_form')[0].reset();
+
+					return true;
+			});
 	});
-	$('body').on('click', '.search-back', function(e){
-		e.preventDefault();
-		$('.search-bar').css({'max-width':'0px', 'opacity': '0'});
-	});
-});
 
-$(function() {
-	$('.material-card > .mc-btn-action').click(function () {
-		var card = $(this).parent('.material-card');
-		var icon = $(this).children('i');
-		icon.addClass('fa-spin-fast');
 
-		if (card.hasClass('mc-active')) {
-			card.removeClass('mc-active');
 
-			window.setTimeout(function() {
-				icon
-					.removeClass('fa-arrow-left ripple')
-					.addClass('fa-bars');
 
-			}, 0);
-		} else {
-			card.addClass('mc-active');
-
-			window.setTimeout(function() {
-				icon
-					.removeClass('fa-bars')
-					.addClass('fa-arrow-left ripple');
-
-			}, 0);
-		}
-	});
-});
-
-$('#click_advance').click(function(){
-	icon = $(this).find("svg");
-	icon.toggleClass("fa-sort-down fa-sort-up")
-	style.toggleClass("margin-bottom: 2px; margin-top: 2px;")
-});
+	

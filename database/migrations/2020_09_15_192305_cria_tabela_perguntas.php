@@ -20,6 +20,7 @@ class CriaTabelaPerguntas extends Migration
             $table->text("pergunta");
             $table->integer("avaliacao")->nullable();
             $table->string("imagem")->nullable();
+            $table->string("data", 200);
             $table->timestamps();
             $table->foreign("usuario_id")->references("id")->on("users")->onDelete("no action")->onUpdate("no action");
         });

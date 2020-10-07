@@ -16,5 +16,6 @@ Route::get('/', 'PrimarioController@home');
 
 Auth::routes();
 
-Route::get('/forum', 'HomeController@forum');
+Route::get('/forum', 'PerguntasController@getIndex');
 Route::get('/perfil/{user_tag}', 'UsuarioController@getIndex');
+Route::post('/pub', 'PerguntasController@save');
