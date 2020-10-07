@@ -104,35 +104,7 @@
 
                 <div class="row active-with-click">
                     <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-5">
-                        <article class="material-card Red">
-                            <h2>
-                                <span>Siddharth Panchal</span>
-                                <strong>
-                                    <i class="fa fa-fw fa-magic"></i>
-                                    Front-End-Developer
-                                </strong>
-                            </h2>
-                            <div class="mc-content">
-                                <div class="img-container">
-                                    <img class="img-fluid" src="https://www.w3schools.com/bootstrap4/img_avatar1.png" alt="" draggable="false" oncontextmenu="return false;" />
-                                </div>
-                                <div class="mc-description">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ...
-                                </div>
-                            </div>
-                            <a class="mc-btn-action ripple">
-                                <i class="fa fa-bars"></i>
-                            </a>
-                            <div class="mc-footer">
-                                <h4>
-                                    Social
-                                </h4>
-                                <a target="_parent" href="#!" class="fa fa-fw fa-facebook ripple"></a>
-                                <a target="_parent" href="#!"  class="fa fa-fw fa-twitter ripple"></a>
-                                <a target="_parent" href="#!"  class="fa fa-fw fa-linkedin ripple"></a>
-                                <a target="_parent" href="#!"  class="fa fa-fw fa-google-plus ripple"></a>
-                            </div>
-                        </article>
+                        
                     </div>
             </div>
         </section>
