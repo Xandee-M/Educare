@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
+use DB;
 
 class PrimarioController extends Controller
 {
@@ -23,5 +25,6 @@ class PrimarioController extends Controller
 
         return view('site.perfil');
     }
+
 
 }

@@ -9,14 +9,16 @@ use Illuminate\Http\Request;
 use DB;
 class PerguntasController extends Controller
 {
-    public function getIndex(){
-        $return = array(
-            "perguntas"         => $this->exibeDuvidas(),
-            
-        );
+    public function getIndex(Request $request){
 
-        // dd($return);
-        return view('site.forum',$return);
+        $duvidas = Perguntas::orderBy('id','desc')->paginate(2);
+
+        if ($request->ajax()) {
+    		$view = view('site.posts',compact('duvidas'))->render();
+            return response()->json(['html'=>$view]);
+        };
+
+        return view('site.forum',compact('duvidas'));
 
     }
 
@@ -51,18 +53,6 @@ class PerguntasController extends Controller
   
     }
 
-    public function exibeDuvidas(){
-     
-        $duvidas = DB::table('users')
-                    ->join('perguntas', 'users.id', '=', 'perguntas.usuario_id')
-                    ->select('users.*', 'perguntas.*')
-                    ->limit(3)
-                    ->orderBy('perguntas.id','desc')
-                    ->get();
-
-
-        return $duvidas;
-    }
 
   
 }

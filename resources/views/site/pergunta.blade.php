@@ -16,58 +16,44 @@
 @endsection
 @section('content')
         
-<div class="container-fluid gedf-wrapper">
+<div class="container-fluid gedf-wrapper mt-10">
         <div class="row">
-            <div class="col-md-3">
-                <div class="card grudado">
-                    <div class="card-body">
-                        <div class="h5">@LeeCross</div>
-                        <div class="h7 text-muted">Fullname : Miracles Lee Cross</div>
-                        <div class="h7">Developer of web applications, JavaScript, PHP, Java, Python, Ruby, Java, Node.js,
-                            etc.
-                        </div>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <div class="h6 text-muted">Followers</div>
-                            <div class="h5">5.2342</div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="h6 text-muted">Following</div>
-                            <div class="h5">6758</div>
-                        </li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6 gedf-main">
+            
+            <div class="col-md-6 offset-md-1 gedf-main">
 
                 <!--- \\\\\\\Form-->
+                @foreach ($pergunta as $item)
                 <div class="card gedf-card">
                     <div class="card-header">
-                        <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="true">Make
-                                    a publication</a>
-                            </li>
-                           
-                        </ul>
-                    </div>
-                    <div class="card-body">
-                    <a type="" data-toggle="modal" data-target="#myModal"><form>
-                    {{ csrf_field() }}
-
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
-                                <div class="form-group">
-                                    <textarea class="form-control" id="message" name="pergunta" rows="3" placeholder="Qual a sua duvida?"></textarea>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="mr-2">
+                                    <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
+                                </div>
+                                <div class="ml-2">
+                                    <div class="h5 m-0">{{ $item->user }}</div>
+                                    <div class="h7 text-muted">{{ $item->name }}</div>
                                 </div>
                             </div>
                         </div>
-                        
-                    </form></a>
+
+                    </div>
+                    <div class="card-body">
+                        <div class="text-muted h7 mb-2"> <i class="fa fa-clock"></i> {{ $item->data }}</div>
+                        <a class="card-link" href="#">
+                            <h5 class="card-title">{{ $item->titulo }}</h5>
+                        </a>
+
+                        <p class="card-text">
+                        {{ $item->pergunta }}
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link"><i class="fa fa-arrow-up"></i> Up</a>
+                        <a href="#" class="card-link"><i class="fa fa-arrow-down"></i> Down</a>
                     </div>
                 </div>
+                @endforeach
                 <!-- Form /////-->
                 <div class="modal fade bd-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
@@ -107,25 +93,18 @@
                                     </div>
                                     <div class="modal-footer">
                                     <div class="btn-group">
-                                                    <button type="submit" onclick="AlteraConteudo()" class="btn btn-primary">share</button>
+                                                    <button type="submit" class="btn btn-primary">share</button>
                                                 </div>
                                     </div>
                                 </div>
                             </form>
                         </div>
                 </div>
-                <!--- \\\\\\\Post-->
-               <div class="" id="post-data">
+          
                
-                    @include('site.posts')
-               </div>
-                
-                <div class="ajax-load text-center" style="display:none">
-                    <p><img src="http://demo.itsolutionstuff.com/plugin/loader.gif">Carregando mais perguntas</p>
-                </div>
 
             </div>
-            <div class="col-md-3">
+            <div class="col col-md-3 offset-md-2">
                 <div class="grudado">
                     <div class="card gedf-card ">
                         <div class="card-body">
@@ -137,8 +116,8 @@
                             <a href="#" class="card-link">Another link</a>
                         </div>
                     </div>
-                    
-                </div>    
+                </div>
+            </div>    
         </div>
     </div>
 

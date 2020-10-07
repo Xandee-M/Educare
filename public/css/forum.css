@@ -1,2 +1,7 @@
 .box-card{border: 1px solid rgb(0, 123, 255) !important;background-color: #ffffff00 !important; }
 .card{margin-bottom: 20px;}
+
+.grudado{
+    position: sticky !important;
+    top: 10px;
+}

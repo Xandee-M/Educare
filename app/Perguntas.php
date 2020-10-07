@@ -10,5 +10,9 @@ class Perguntas extends Model
         'titulo', 'pergunta', 'data', 'usuario_id', 'avaliacao', 'imagem',
     ];
 
+    public function escritor(){
 
+        return $this->belongsTo('App\User', 'usuario_id');
+    }
+     
 }

@@ -24,7 +24,7 @@
 
 <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
 	<div class="container-fluid">
-		<a class="h4 mb-0 text-uppercase d-none d-lg-inline-block" href="/" >Logo</a>
+		<a class="h4 mb-0 text-uppercase d-none d-lg-inline-block" href="/forum" >Logo</a>
 		<!-- Form -->
 		<form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
 			<div class="form-group mb-0">
@@ -53,7 +53,9 @@
 							<img alt="Image placeholder" src="https://picsum.photos/140/140">
 						</span>
 						<div class="media-body ml-2 d-none d-lg-block">
+						
 							<span class="mb-0 text-sm navname font-weight-bold">{{ Auth::user()->user }} <i class="fas fa-sort-down"></i></span>
+						
 						</div>
 					</div>
 				</a>
@@ -84,86 +86,18 @@
 
     @yield('content')
 
-    <footer class="footer-area">
-			<div class="container">
-				<div class="row">				
-					<div class="col-md-4 col-sm-6">
-						<div class="bloco-ftr">
-							<h4 class="title-ftr">Informações</h4>
-							<ul>
-								<li><a href="#">A Educare++</a></li>
-								<li><a href="#">Fórum</a></li>
-								<li><a href="#">Politica de Privacidade</a></li>
-								<li><a href="#">Termos e condições</a></li>
-								<li><a href="#">Entre em contato</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="bloco-ftr">
-							<h4 class="title-ftr">Links Úteis</h4>
-							<ul>
-								<li><a href="#">Fórum</a></li>
-								<li><a href="#">Cursos</a></li>
-								<li><a href="#">Perfil</a></li>
-								<li><a href="#">FAQ</a></li>
-								<li><a href="#">Central do Professor</a></li>
-							</ul>
-						</div>
-					</div>	
-					<div class="col-md-4 col-sm-6">
-						<div class="bloco-ftr">
-							<h4 class="title-ftr">Newsletter</h4>
-							<div class="newsletter-form">
-								<p>Receba dicas e novidades em seu e-mail sobre o Educare++</p>
-								<form method="POST" class="form-inline">				
-									<input name="EMAIL" id="email" placeholder="Seu e-mail" class="form-control" type="email">
-									<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="ftr-btm-area">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12 text-center">
-							<p class="copyright-text text-center">© 2020 Todos os direitos reservados</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-        <div class="modal animate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">×</span>
-						</button>
-					</div>
-					<div class="modal-body text-center p-lg">
-                    <form>
-<p>Escolha uma cor para o fundo da página</p>
-<input id="seletor_de_cores" type="color"/><br><br>
-<button type="button" onclick="mudar_cor_de_fundo()">Executar</button>
-</form>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
-					</div>
-				</div>
-			</div>
-		</div>
-    <script src="/js/jquery-3.5.1.min.js"></script>
+
+
+	@yield('footer')     
+	<script
+	src="https://code.jquery.com/jquery-3.5.1.min.js"
+	integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+	crossorigin="anonymous"></script>
     <script src="/bootstrap/popper.min.js"></script>
     <script src="/js/bootstrap/bootstrap.min.js"></script>
     <script defer src="/fontawesome/js/all.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="/js/custom.js"></script>
+
 </body>
 </html>
 

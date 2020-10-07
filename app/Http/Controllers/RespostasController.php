@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Respostas;
 use Illuminate\Http\Request;
+use DB;
 
 class RespostasController extends Controller
 {
@@ -12,9 +13,21 @@ class RespostasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function getIndex(Request $request, $pergunta_id)
     {
-        //
+
+        $data =  DB::table('users')
+        ->join('perguntas', 'users.id', '=', 'perguntas.usuario_id')
+        // ->join('respostas', 'perguntas.id', '=', 'respostas.pergunta_id')
+        // ->select('perguntas.*', 'respostas.*')
+        ->select('perguntas.*', 'users.*')
+        ->where('perguntas.id', $pergunta_id)
+        ->get();
+
+  
+
+        return view('site.pergunta',['pergunta' => $data]);
+
     }
 
     /**

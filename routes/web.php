@@ -19,3 +19,4 @@ Auth::routes();
 Route::get('/forum', 'PerguntasController@getIndex');
 Route::get('/perfil/{user_tag}', 'UsuarioController@getIndex');
 Route::post('/pub', 'PerguntasController@save');
+Route::get('/perguntas/{pergunta_id}', 'RespostasController@getIndex');
