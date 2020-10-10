@@ -8,17 +8,17 @@
     <link rel="stylesheet" href="/css/forum.css">
     <style type="text/css">
   		.ajax-load{
-  			
+
 		    padding: 10px 0px;
 		    width: 100%;
   		}
   	</style>
 @endsection
 @section('content')
-        
+
 <div class="container-fluid gedf-wrapper mt-10">
         <div class="row">
-            
+
             <div class="col-md-6 offset-md-1 gedf-main">
 
                 <!--- \\\\\\\Form-->
@@ -62,7 +62,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h4 class="modal-title" id="myModalLabel">Tire sua Duvida</h4>
-                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>                
+                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
                                     </div>
                                     <div class="modal-body">
                                             <div class="tab-content" id="myTabContent">
@@ -76,7 +76,7 @@
                                                 </div>
                                             </div>
                                             <div class="btn-toolbar justify-content-between">
-                                                
+
                                                 <!-- <div class="btn-group">
                                                     <button id="btnGroupDrop1" type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                                                         aria-expanded="false">
@@ -89,7 +89,7 @@
                                                     </div>
                                                 </div> -->
                                             </div>
-                                      
+
                                     </div>
                                     <div class="modal-footer">
                                     <div class="btn-group">
@@ -100,8 +100,8 @@
                             </form>
                         </div>
                 </div>
-          
-               
+
+
 
             </div>
             <div class="col col-md-3 offset-md-2">
@@ -117,7 +117,7 @@
                         </div>
                     </div>
                 </div>
-            </div>    
+            </div>
         </div>
     </div>
 
@@ -126,7 +126,7 @@
 
 </div>
 </div>
-    
+
 @endsection
 @section('footer')
 

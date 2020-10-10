@@ -18,13 +18,13 @@ class RespostasController extends Controller
 
         $data =  DB::table('users')
         ->join('perguntas', 'users.id', '=', 'perguntas.usuario_id')
-        // ->join('respostas', 'perguntas.id', '=', 'respostas.pergunta_id')
+        ->join('respostas', 'perguntas.id', '=', 'respostas.pergunta_id')
         // ->select('perguntas.*', 'respostas.*')
-        ->select('perguntas.*', 'users.*')
+        ->select('perguntas.*', 'users.*', 'respostas.*')
         ->where('perguntas.id', $pergunta_id)
         ->get();
 
-  
+
 
         return view('site.pergunta',['pergunta' => $data]);
 
@@ -46,9 +46,10 @@ class RespostasController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
-        //
+      $resposta=new Respostas();
+      //$resposta->
     }
 
     /**

@@ -14,5 +14,8 @@ class Perguntas extends Model
 
         return $this->belongsTo('App\User', 'usuario_id');
     }
-     
+     public function respostas(){
+
+       return $this->hasMany('App\Respostas');
+     }
 }
