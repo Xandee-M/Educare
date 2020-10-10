@@ -22,7 +22,7 @@ class PerguntasController extends Controller
 
     }
 
-    public function create(){
+    public function create(){      
 
     }
 
@@ -54,9 +54,5 @@ class PerguntasController extends Controller
       } catch (Exception $e){
         return response()->json(["erro"=> $e]);
       }
-
     }
-
-
-
 }

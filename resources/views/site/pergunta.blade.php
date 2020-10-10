@@ -31,12 +31,16 @@
                                     <img class="rounded-circle" width="45" src="https://picsum.photos/50/50" alt="">
                                 </div>
                                 <div class="ml-2">
-                                    <div class="h5 m-0">{{ $item->user }}</div>
-                                    <div class="h7 text-muted">{{ $item->name }}</div>
+                                    <div class="h5 m-0">{{ $item->escritor->user}}</div>
+                                    <div class="h7 text-muted">{{ $item->escritor->name }}</div>
                                 </div>
                             </div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <a href="#" class="card-link"><i class="fa fa-arrow-up"></i> Up</a>
+                                <a href="#" class="card-link"><i class="fa fa-arrow-down"></i> Down</a>
+                            </div>
                         </div>
-
+                       
                     </div>
                     <div class="card-body">
                         <div class="text-muted h7 mb-2"> <i class="fa fa-clock"></i> {{ $item->data }}</div>
@@ -49,61 +53,29 @@
                         </p>
                     </div>
                     <div class="card-footer">
-                        <a href="#" class="card-link"><i class="fa fa-arrow-up"></i> Up</a>
-                        <a href="#" class="card-link"><i class="fa fa-arrow-down"></i> Down</a>
+                    <form id="ajax_form" action="javascript:void(0)" method="post">
+                            {{ csrf_field() }}
+                            <input type="hidden" name="perguntaid" value="{{ $item->id }}">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Responder..." name="resposta" aria-label="Resposta..." aria-describedby="button-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="submit">Enviar</button>
+
+                                </div>
+                            </div>
+                    </form>
                     </div>
+                   
                 </div>
                 @endforeach
                 <!-- Form /////-->
-                <div class="modal fade bd-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                            <form id="ajax_form" action="javascript:void(0)" method="post">
-                            {{ csrf_field() }}
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h4 class="modal-title" id="myModalLabel">Tire sua Duvida</h4>
-                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                                    </div>
-                                    <div class="modal-body">
-                                            <div class="tab-content" id="myTabContent">
-                                                <div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
-                                                    <div class="form-group">
-                                                        <input class="form-control" id="titulo" name="titulo" placeholder="Titulo" required>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <textarea class="form-control" id="pergunta" name="pergunta" rows="3" required placeholder="Qual a sua duvida?"></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="btn-toolbar justify-content-between">
 
-                                                <!-- <div class="btn-group">
-                                                    <button id="btnGroupDrop1" type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
-                                                        <i class="fa fa-globe"></i>
-                                                    </button>
-                                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1">
-                                                        <a class="dropdown-item" href="#"><i class="fa fa-globe"></i> Public</a>
-                                                        <a class="dropdown-item" href="#"><i class="fa fa-users"></i> Friends</a>
-                                                        <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Just me</a>
-                                                    </div>
-                                                </div> -->
-                                            </div>
+                <div id="post-data">
+                @include('site.respostas')
 
-                                    </div>
-                                    <div class="modal-footer">
-                                    <div class="btn-group">
-                                                    <button type="submit" class="btn btn-primary">share</button>
-                                                </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
                 </div>
 
-
-
-            </div>
+                </div>
             <div class="col col-md-3 offset-md-2">
                 <div class="grudado">
                     <div class="card gedf-card ">
@@ -126,6 +98,8 @@
 
 </div>
 </div>
+
+
 
 @endsection
 @section('footer')

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Perguntas extends Model
 {
     protected $fillable = [
-        'titulo', 'pergunta', 'data', 'usuario_id', 'avaliacao', 'imagem',
+        'titulo', 'pergunta', 'data', 'usuario_id', 'avaliacao', 'imagem', 'id',
     ];
 
     public function escritor(){
@@ -16,6 +16,6 @@ class Perguntas extends Model
     }
      public function respostas(){
 
-       return $this->hasMany('App\Respostas');
+       return $this->hasMany('App\Respostas', 'pergunta_id');
      }
 }
