@@ -18,29 +18,40 @@
         
 <div class="container-fluid gedf-wrapper">
         <div class="row">
-            <div class="col-md-3">
-                <div class="card grudado">
-                    <div class="card-body">
-                        <div class="h5">@LeeCross</div>
-                        <div class="h7 text-muted">Fullname : Miracles Lee Cross</div>
-                        <div class="h7">Developer of web applications, JavaScript, PHP, Java, Python, Ruby, Java, Node.js,
-                            etc.
-                        </div>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <div class="h6 text-muted">Followers</div>
-                            <div class="h5">5.2342</div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="h6 text-muted">Following</div>
-                            <div class="h5">6758</div>
-                        </li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
-                </div>
+            <div class="col-md-2 p-0">
+            <div class="grudado">
+
+            <div id="jquery-accordion-menu" class="jquery-accordion-menu">
+				<ul>
+                <li><a href="/perfil/{{ Auth::user()->slug }}">
+				
+					<div class="media align-items-center">
+						<span class="avatar avatar-sm rounded-circle">
+							<img alt="Image placeholder" src="https://picsum.photos/140/140">
+						</span>
+						<div class="media-body ml-2 d-none d-lg-block">
+						
+							{{ Auth::user()->user }}
+						
+						</div>
+					</div>
+				
+                    </a>
+			</li>
+                    @guest
+		    		@else
+					<li class="active"><a href="/forum"><i class="fa fa-home"></i>Home </a></li>
+					<li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-envelope"></i>Sair </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+					@csrf
+					</form>
+                    @endguest
+                    </li>
+				</ul>
+			</div>
             </div>
-            <div class="col-md-6 gedf-main">
+            </div>
+            <div class="col-md-7 gedf-main">
 
                 <!--- \\\\\\\Form-->
                 <div class="card gedf-card">
@@ -71,7 +82,7 @@
                 <!-- Form /////-->
                 <div class="modal fade bd-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
-                            <form id="ajax_form" action="javascript:void(0)" method="post">
+                            <form id="pub_form" action="javascript:void(0)" method="post">
                             {{ csrf_field() }}
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -107,7 +118,7 @@
                                     </div>
                                     <div class="modal-footer">
                                     <div class="btn-group">
-                                                    <button type="submit" onclick="AlteraConteudo()" class="btn btn-primary">share</button>
+                                                    <button type="submit"  class="btn btn-primary">share</button>
                                                 </div>
                                     </div>
                                 </div>
@@ -127,16 +138,16 @@
             </div>
             <div class="col-md-3">
                 <div class="grudado">
-                    <div class="card gedf-card ">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                                card's content.</p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>
-                    </div>
+                   <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
+			<div class="form-group mb-0">
+				 <div class="input-group input-group-alternative">
+					<div class="input-group-prepend">
+						<span class="input-group-text"><i class="fas fa-search"></i></span>
+					</div>
+					<input class="form-control" placeholder="Pesquisar" type="text">
+				</div>
+			</div>
+		</form>
                     
                 </div>    
         </div>

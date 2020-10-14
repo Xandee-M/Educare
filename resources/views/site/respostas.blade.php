@@ -44,4 +44,5 @@
                         <a href="#" class="card-link"><i class="fa fa-arrow-down"></i> Down</a>
                     </div>
                 </div>
+                
                 @endforeach

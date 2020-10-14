@@ -25,7 +25,7 @@
     @yield('content')
 
     <footer class="footer-area">
-			<div class="container">
+			<!-- <div class="container">
 				<div class="row">				
 					<div class="col-md-4 col-sm-6">
 						<div class="bloco-ftr">
@@ -64,12 +64,12 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="ftr-btm-area">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12 text-center">
-							<p class="copyright-text text-center">© 2020 Todos os direitos reservados</p>
+							<p class="copyright-text text-center">© 2020 Educare++</p>
 						</div>
 					</div>
 				</div>

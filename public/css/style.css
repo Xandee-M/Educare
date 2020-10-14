@@ -36,3 +36,5 @@ textarea{background-color: #ffffff00 !important;}
 .full-section .container .row{height: 100%;}
 
 .image-section{background-size: contain;background-position-y: center;background-repeat: no-repeat;}
+
+.p-0{    padding: 0;}
