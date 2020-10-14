@@ -1,5 +1,5 @@
 
-                @foreach ($resposta as $item)
+                @foreach ($pUser as $item)
                 <div class="card gedf-card">
                     <div class="card-header">
                         <div class="d-flex justify-content-between align-items-center">
@@ -17,12 +17,12 @@
                     </div>
                     <div class="card-body">
                         <div class="text-muted h7 mb-2"> <i class="fa fa-clock"></i> {{ $item->data }}</div>
-
+                        <a class="card-link" href="#">
+                            <h5 class="card-title">{{ $item->titulo }}</h5>
+                        </a>
 
                         <p class="card-text">
-                           
-                                {{ $item->resposta }}
-                        
+                        {{ $item->pergunta }}
                         </p>
                     </div>
                    

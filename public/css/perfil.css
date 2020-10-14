@@ -23,8 +23,8 @@
 
 }
 .profile-info{
-    display: inline-block;
-    flex-direction: column;
+    display: block;
+    text-align: center;
 }
 .profile-description{
     width: 100%;
@@ -39,7 +39,7 @@
 
 .full-banner{padding-left: 0px !important; padding-right: 0px !important;}
 .banner{height: 200px;}
-.box-perfil-p{position: absolute;top: -10vh; left: 30px;}
+.box-perfil-p{position: relative;top: -10vh;text-align: center;}
 .perfil-p {border-radius: 50%;border: solid 5px #fff;  }
 
 .box-medalha{position: absolute;top: -5vh; left: 30px;}

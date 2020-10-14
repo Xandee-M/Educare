@@ -17,8 +17,10 @@ Route::get('/', 'PrimarioController@home');
 Auth::routes();
 
 Route::get('/forum', 'PerguntasController@getIndex');
-Route::get('/perfil/{user_tag}', 'UsuarioController@getIndex');
-Route::post('/pub', 'PerguntasController@save');
-Route::get('/perguntas/{pergunta_id}', 'RespostasController@getIndex');
-Route::post('/resp', 'RespostasController@responder');
+Route::get('/perfil/{user_id}/{user_slug}', 'UsuarioController@getIndex');
 
+Route::get('/perguntas/{pergunta_id}', 'RespostasController@getIndex');
+
+Route::post('/resp', 'RespostasController@responder');
+Route::post('/pub', 'PerguntasController@save');
+Route::post('/busca', 'BuscaController@busca');

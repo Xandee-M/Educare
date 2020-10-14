@@ -52,30 +52,12 @@
                                 <p class=" mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit proin leo ornare!</p>
                             </div>
                         </div>
-                       <div class="col-md-6 col-lg-3 wow bounceInUp" >
-                            <div class="sobre-box mx-auto">
-                                <div class="icones d-flex">
-                                    <i class="fab fa-android fa-5x android m-auto"></i>
-                                </div>
-                                <h5>Android</h5>
-                                <p class=" mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit proin leo ornare!</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3 wow bounceInUp" >
-                             <div class="sobre-box mx-auto">
-                                 <div class="icones d-flex">
-                                     <i class="fab fa-android fa-5x android m-auto"></i>
-                                 </div>
-                                 <h5>Android</h5>
-                                 <p class=" mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit proin leo ornare!</p>
-                             </div>
-                         </div>
                          <div class="col-md-6 col-lg-3 wow bounceInUp" >
                               <div class="sobre-box mx-auto">
                                   <div class="icones d-flex">
-                                      <i class="fab fa-android fa-5x android m-auto"></i>
+                                      <i class="fab fa-laravel fa-5x android m-auto"></i>
                                   </div>
-                                  <h5>Android</h5>
+                                  <h5>Laravel</h5>
                                   <p class=" mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit proin leo ornare!</p>
                               </div>
                           </div>
@@ -97,20 +79,6 @@
 
 
 		<!--Our Team-->
-        <section class="time" id="team">
-            <div class="container">
-                <h2 class="title-time ">Nossos Fundadores</h2>
-                <p class="subtitle-time ">Lorem ipsum dolor sit amet consectetur adipiscing elit proin leo leo ornare nec vulputate tempus velit nam id purus tellus hendrerit mi dapibus</p>
-
-                <div class="row active-with-click">
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-5">
-                        
-                    </div>
-            </div>
-        </section>
-
-
-
-
+       
 
 @endsection

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Perguntas;
 use Illuminate\Http\Request;
 
 class UsuarioController extends Controller
@@ -12,8 +13,11 @@ class UsuarioController extends Controller
         $this->middleware('auth');
     }
 
-    function getIndex(Request $request, $user_slug) {
+    function getIndex(Request $request, $user_id, $user_slug) {
         $user = User::where('slug', $user_slug)->firstOrFail();
-        return view('site.perfil', ['user' => $user]);
+        $pUser = Perguntas::where('usuario_id', $user_id)->orderBy('id','desc')->get();
+
+ 
+        return view('site.perfil',['user' => $user],['pUser' => $pUser]);
     }
 }

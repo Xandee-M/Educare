@@ -3,22 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\Perguntas;
-use App\Users;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use DB;
 class PerguntasController extends Controller
 {
     public function getIndex(Request $request){
-
+        $idlogado = Auth::user()->id;
         $duvidas = Perguntas::orderBy('id','desc')->paginate(2);
-
+        $user = User::where('id', $idlogado)->get();
         if ($request->ajax()) {
     		$view = view('site.posts',compact('duvidas'))->render();
             return response()->json(['html'=>$view]);
         };
 
-        return view('site.forum',compact('duvidas'));
+        return view('site.forum',compact('duvidas'),['user' => $user]);
 
     }
 
@@ -32,14 +32,13 @@ class PerguntasController extends Controller
         date_default_timezone_set('America/Sao_Paulo');
 
         $dia = strftime("%e de %b as %H:%M");
-        $data = $request->all();
-
+        
         $userid = Auth::id();
-
+      
         $dataDetail = array(
 
-            'titulo' => $data['titulo'],
-            'pergunta' => $data['pergunta'],
+            'titulo' => $request->titulo,
+            'pergunta' => $request->pergunta,
             'data' => $dia,
             'usuario_id' => $userid,
         );

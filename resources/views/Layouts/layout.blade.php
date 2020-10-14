@@ -20,7 +20,61 @@
 <body id="pagina">
 
 
-
+    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+        <div class="container-fluid">
+            <a class="h4 mb-0 text-uppercase d-none d-lg-inline-block" href="/forum" >Educare++</a>
+            <!-- Form -->
+            <form id="teste" method="post" action="{{ url('/busca') }}" class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
+                {{ csrf_field() }}
+                    <div class="form-group mb-0">
+                        <div class="input-group input-group-alternative">
+                            <div class="input-group-prepend">
+                            <input class="form-control" name="busca" placeholder="Pesquisar" type="text">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="submit"><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form> 
+            <!-- User -->
+    
+    
+            <ul class="navbar-nav align-items-center d-none d-md-flex">
+           
+                <li class="nav-item dropdown">
+                    <a id="click_advance" class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="media align-items-center">
+                            <span class="avatar avatar-sm rounded-circle">
+                                <img alt="Image placeholder" src="https://picsum.photos/140/140">
+                            </span>
+                            <div class="media-body ml-2 d-none d-lg-block">
+    
+                                <span class="mb-0 text-sm navname font-weight-bold">{{ Auth::user()->user }} <i class="fas fa-sort-down"></i></span>
+    
+                            </div>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">	
+                    @guest
+                    @else				
+                        <a href="/perfil/{{ Auth::user()->id }}/{{ Auth::user()->slug }}" class="dropdown-item">
+                            <span>Meu perfil</span>
+                        </a>
+                       
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                           Sair
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                        </form>
+                    @endguest
+                    </div>
+                </li>		
+            </ul>
+        </div>
+    </nav>
 
 
 

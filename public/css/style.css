@@ -37,4 +37,6 @@ textarea{background-color: #ffffff00 !important;}
 
 .image-section{background-size: contain;background-position-y: center;background-repeat: no-repeat;}
 
-.p-0{    padding: 0;}
+.p-0{padding: 0;}
+.h-80{height: 80px;}
+.mt-30{margin-top: 30px;}

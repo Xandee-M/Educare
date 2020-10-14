@@ -18,13 +18,16 @@
         
 <div class="container-fluid gedf-wrapper">
         <div class="row">
-            <div class="col-md-2 p-0">
+            {{-- <div class="col-md-2 p-0" >
             <div class="grudado">
 
-            <div id="jquery-accordion-menu" class="jquery-accordion-menu">
+            <div id="jquery-accordion-menu" style="border-right: 1px solid #000;padding-top: 30px;" class="jquery-accordion-menu">
 				<ul>
-                <li><a href="/perfil/{{ Auth::user()->slug }}">
-				
+                    @foreach ($user as $item)
+                        
+                   
+                <li><a href="/perfil/{{ $item->id }}/{{ Auth::user()->slug }}">
+                    @endforeach
 					<div class="media align-items-center">
 						<span class="avatar avatar-sm rounded-circle">
 							<img alt="Image placeholder" src="https://picsum.photos/140/140">
@@ -50,39 +53,27 @@
 				</ul>
 			</div>
             </div>
-            </div>
-            <div class="col-md-7 gedf-main">
+            </div> --}}
+            <div class="col-md-8 offset-md-2 gedf-main" style="margin-top: 30px">
 
                 <!--- \\\\\\\Form-->
                 <div class="card gedf-card">
-                    <div class="card-header">
-                        <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="true">Make
-                                    a publication</a>
-                            </li>
-                           
-                        </ul>
-                    </div>
+                    
                     <div class="card-body">
-                    <a type="" data-toggle="modal" data-target="#myModal"><form>
-                    {{ csrf_field() }}
-
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
+                    <a type="" data-toggle="modal" data-target="#myModal">
+                        <form>
+            
                                 <div class="form-group">
-                                    <textarea class="form-control" id="message" name="pergunta" rows="3" placeholder="Qual a sua duvida?"></textarea>
+                                    <textarea class="form-control" id="message" name="" rows="3" placeholder="Qual a sua duvida?" disabled></textarea>
                                 </div>
-                            </div>
-                        </div>
-                        
-                    </form></a>
+                            </form>
+                    </a>
                     </div>
                 </div>
                 <!-- Form /////-->
                 <div class="modal fade bd-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
-                            <form id="pub_form" action="javascript:void(0)" method="post">
+                            <form id="pub_form" action="javascript:void(0)"  method="POST">
                             {{ csrf_field() }}
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -90,36 +81,21 @@
                                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>                
                                     </div>
                                     <div class="modal-body">
-                                            <div class="tab-content" id="myTabContent">
-                                                <div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
-                                                    <div class="form-group">
-                                                        <input class="form-control" id="titulo" name="titulo" placeholder="Titulo" required>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <textarea class="form-control" id="pergunta" name="pergunta" rows="3" required placeholder="Qual a sua duvida?"></textarea>
-                                                    </div>
+                                        <div class="tab-content" id="myTabContent">
+                                            <div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
+                                                <div class="form-group">
+                                                    <input class="form-control" id="titulo" name="titulo" placeholder="Titulo" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <textarea class="form-control" id="pergunta" name="pergunta" rows="3" required placeholder="Qual a sua duvida?"></textarea>
                                                 </div>
                                             </div>
-                                            <div class="btn-toolbar justify-content-between">
-                                                
-                                                <!-- <div class="btn-group">
-                                                    <button id="btnGroupDrop1" type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">
-                                                        <i class="fa fa-globe"></i>
-                                                    </button>
-                                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1">
-                                                        <a class="dropdown-item" href="#"><i class="fa fa-globe"></i> Public</a>
-                                                        <a class="dropdown-item" href="#"><i class="fa fa-users"></i> Friends</a>
-                                                        <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Just me</a>
-                                                    </div>
-                                                </div> -->
-                                            </div>
-                                      
+                                        </div>
                                     </div>
                                     <div class="modal-footer">
-                                    <div class="btn-group">
-                                                    <button type="submit"  class="btn btn-primary">share</button>
-                                                </div>
+                                        <div class="btn-group">
+                                            <button type="submit" onClick="window.location.reload();"  class="btn btn-primary">Enviar</button>
+                                        </div>
                                     </div>
                                 </div>
                             </form>
@@ -131,26 +107,10 @@
                     @include('site.posts')
                </div>
                 
-                <div class="ajax-load text-center" style="display:none">
-                    <p><img src="http://demo.itsolutionstuff.com/plugin/loader.gif">Carregando mais perguntas</p>
-                </div>
+                
 
             </div>
-            <div class="col-md-3">
-                <div class="grudado">
-                   <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
-			<div class="form-group mb-0">
-				 <div class="input-group input-group-alternative">
-					<div class="input-group-prepend">
-						<span class="input-group-text"><i class="fas fa-search"></i></span>
-					</div>
-					<input class="form-control" placeholder="Pesquisar" type="text">
-				</div>
-			</div>
-		</form>
-                    
-                </div>    
-        </div>
+           
     </div>
 
 

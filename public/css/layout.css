@@ -10,7 +10,7 @@ body {
 
 /* Footer */
 
-.footer-area {padding:60px 0 20px;position: relative;z-index: 100;background: #222;word-break: break-all;color: #fff;word-wrap: break-word;}
+.footer-area {position: relative;z-index: 100;background: #222;word-break: break-all;color: #fff;word-wrap: break-word;}
 .footer-area ul {list-style: none;padding-left: 0px;margin-bottom: 0;}
 .bloco-ftr form{margin-top: 8px;}
 .bloco-ftr p{margin-bottom: 10px;}
